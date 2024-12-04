@@ -1,0 +1,26 @@
+.full-width-title {
+  width: 90vw; /* Full width of the page */
+  margin: 10vh 5vw 5vh;
+  text-align: center; /* Center the text horizontally */
+  padding: 20px 0; /* Add some padding for vertical space */
+  background-color: rgba(50, 50, 50, 0.5); /* Light grey with 50% transparency */
+  color: whitesmoke; /* Optional: Text color */
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
+  border: 5px solid grey;
+  border-radius: 20px;
+}
+
+.full-width-title h1 {
+  margin: 0; /* Remove default margin to control spacing */
+  font-size: 2.5rem; /* Adjust the title size */
+  color: whitesmoke;
+}
+
+@media (max-width: 768px) {
+  .full-width-title h1 {
+    font-size: 1.8rem; /* Smaller font size for mobile */
+  }
+  .full-width-title {
+    padding: 15px 0; /* Adjust padding for smaller screens */
+  }
+}

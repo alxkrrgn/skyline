@@ -1,0 +1,105 @@
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    /* Blurry background for ul */
+    .toolbar ul {
+        
+        /*
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      /*backdrop-filter: blur(10px); /* Apply blur effect */
+      /*background: rgba(255, 255, 255, 0.1); /* Adds glossy layer */
+      /*box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+
+        /* Metallic glossy Backgrond */
+
+        background: linear-gradient(135deg, rgba(192, 192, 192, 0.3), rgba(169, 169, 169, 0.2), rgba(128, 128, 128, 0.4)); /* Silver gradient */
+        background-color: rgba(200, 200, 200, 0.3); /* Semi-transparent metallic base */
+        backdrop-filter: blur(8px) brightness(1.2) contrast(1.1); /* Adds sheen and contrast */
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4); /* Darker shadow for depth */
+        
+
+         /* Rainbow gradient */
+        /*background: linear-gradient(135deg, rgba(255, 0, 150, 0.2), rgba(0, 204, 255, 0.2), rgba(255, 204, 0, 0.2)); /* Rainbow gradient */
+        /*backdrop-filter: blur(10px); /* Standard blur for glossiness */
+        /*box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3); /* Slightly darker shadow for depth */
+
+        /* light grey mettalic with shattered glass */
+        /*background: 
+        repeating-linear-gradient(135deg, rgba(200, 200, 200, 0.2), rgba(180, 180, 180, 0.2) 10px, rgba(160, 160, 160, 0.3) 20px), /* Light grey metallic gradient */
+        /*radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15), transparent 30%), /* Adds light reflection spots */
+        /*repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 2px, transparent 2px, transparent 10px), /* Shattered glass pattern */
+        /*repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 2px, transparent 2px, transparent 10px); /* Adds crosshatch to enhance glass look */
+       
+        /*background-color: rgba(225, 225, 225, 0.2); /* Light grey base color */
+       /* backdrop-filter: blur(8px) brightness(1.2) contrast(1.2); /* Sheen, contrast, and blur for glassy look */
+        /*box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+
+
+        /* light grey metallic glossy with random circles */
+       /* background: 
+        radial-gradient(circle at 10% 20%, rgba(200, 200, 200, 0.3), transparent 50%),
+        radial-gradient(circle at 50% 30%, rgba(180, 180, 180, 0.4), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(150, 150, 150, 0.3), transparent 40%),
+        radial-gradient(circle at 20% 80%, rgba(130, 130, 130, 0.3), transparent 20%), /* Random circles */
+        /*linear-gradient(135deg, rgba(180, 180, 180, 0.4), rgba(150, 150, 150, 0.5), rgba(120, 120, 120, 0.6)); /* Metallic base gradient */
+    
+   /* background-color: rgba(200, 200, 200, 0.3); /* Light grey metallic base */
+    /*backdrop-filter: blur(10px) brightness(1.2) contrast(1.15); /* Enhances sheen and gloss */
+   /* box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3); /* Depth shadow */
+    
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    /* When the checkbox is checked, show the menu */
+    #check:checked ~ ul {
+        right: 0;
+    }
+
+    /* Keep checkbtn (hamburger icon) to the right of the logo */
+    .checkbtn {
+        float: left; /* Align to the right */
+        margin-right: 20px; /* Space between logo and hamburger */
+        z-index: 1001; /* Ensure it's on top of everything */
+    }
+
+    /* Style for the button inside checkbtn */
+    .checkbtn .button-21 {
+        font-size: 24px; /* Size of the bars */
+        color: black; /* Color of the icon */
+    }
+
+    /* Make sure list items are visible */
+    .toolbar ul li {
+        margin: 20px 0;
+        z-index: 1001; /* Keep li elements visible and above blur */
+        width: auto;
+    }
+
+    /* Style links inside li */
+    .toolbar ul li a {
+        font-size: 15px;
+        color: black; /* Adjust as per your theme */
+    }
+
+    /* Adjust the logo positioning */
+    .logo {
+        float: left; /* Keep the logo on the left */
+        margin-left: 0px; /* Space between the edge and logo */
+    }
+
+    /* Clear floats to maintain layout */
+    .toolbar::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+

@@ -1,0 +1,14 @@
+nvm ls
+nvm install 18
+nvm install 20
+nvm use 18   # Or `nvm use 20` if you installed v20
+node -v
+npm -v
+rm -rf build
+
+rm -rf node_modules package-lock.json
+npm install
+npm cache clean --force
+
+npm run clean
+

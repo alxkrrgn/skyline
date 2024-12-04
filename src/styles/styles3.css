@@ -1,0 +1,228 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply colors using CSS variables */
+body {
+    height: 200vh; /* Create a tall page for scrolling effect */
+    background-color: #f0f0f0; /* Light gray background for the body */
+    font-family: 'Arial', sans-serif;
+    margin: 0 auto; /* Center the body horizontally */
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+/* Styling for the header (top toolbar) */
+header {
+    background-color: #000; /* Black header background */
+    color: #fff; /* White header text color */
+    display: flex;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 15%;
+    padding-right: 15%;
+    z-index: 1000;
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Distribute content evenly */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    
+}
+
+/* Styling for the left header section (logo) */
+.left-header {
+    flex: 1; /* Grow to fill available space */
+    height: 100%; /* Match the height of the header */
+}
+
+.left-header img {
+    max-height: 100%; /* Ensure the logo fits within the height of the left header */
+    border-radius: 50%; /* Add rounded corners to the logo */
+    transition: transform 0.3s ease-in-out; /* Add a smooth scale effect on hover */
+}
+
+.left-header img:hover {
+    transform: scale(1.1); /* Scale up the logo on hover */
+}
+
+/* Styling for the right header section */
+.right-header {
+    /* Add any styles you want for the right header content */
+}
+
+/* Styling for the toolbar (right content) */
+.toolbar {
+    background-color: #000; /* Black toolbar background */
+    color: #fff; /* White toolbar text color */
+    padding: 10px 20px;
+    text-align: right;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px; /* Rounded corners at the bottom */
+    border-bottom-right-radius: 10px; /* Rounded corners at the bottom */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Box shadow */
+}
+
+.toolbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.toolbar li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.toolbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: normal;
+    transition: font-weight 0.3s ease-in-out; /* Add a smooth font-weight change on hover */
+}
+
+/* Add hover effect for the bold option */
+.toolbar a:hover {
+    font-weight: bold;
+}
+
+/* Styling for the main content section */
+main {
+    max-width: 100%; /* 75% width of the page for the main content */
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 80px; /* Add margin-top to create space for the fixed header */
+    border-radius: 10px; /* Rounded corners for the main content */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Box shadow */
+    background-color: #fff; /* White background for the main content */
+}
+
+/* Styling for the content section */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling for the left content section */
+.left-content {
+    flex: 1;
+    padding-right: 20px;
+    background-color: #f5f5f5; /* Light gray background for left content */
+    color: #333; /* Dark gray text color for left content */
+    border-radius: 10px; /* Rounded corners for left content */
+    padding: 20px;
+}
+
+.left-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.left-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the right content section */
+.right-content {
+    flex: 1;
+    background-color: #f5f5f5; /* Light gray background for left content */
+    color: #333; /* Dark gray text color for right content */
+    border-radius: 10px; /* Rounded corners for right content */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow */
+}
+
+.right-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.right-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styling for the footer */
+/* Styling for the footer */
+/* Styling for the footer */
+/* Styling for the footer */
+footer {
+    background-color: #000; /* Black footer background */
+    color: #fff; /* White footer text color */
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure the footer is on top of other content */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+/* Styling for the right content in the footer */
+.right-footer-content {
+    /* Add any styles you want for the right content in the footer */
+}
+
+/* Styling for the navigation links in the footer */
+.footer-navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center-align the text within the ul element */
+}
+
+.footer-navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center-align the text within the ul element */
+}
+.footer-navigation li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.footer-navigation a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: normal;
+    transition: font-weight 0.3s ease-in-out; /* Add a smooth font-weight change on hover */
+}
+
+/* Add hover effect for the bold option in the footer navigation */
+.footer-navigation a:hover {
+    font-weight: bold;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Center content vertically on the viewport */
+}
+
+.rolling-content {
+    opacity: 0; /* Initially, make the content invisible */
+    transform: translateY(20px); /* Move content down by 20px */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add transitions for smooth appearance */
+}
+
+/* When content is scrolled into view, make it visible and move it up */
+.rolling-content.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*img {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}

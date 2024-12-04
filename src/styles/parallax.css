@@ -1,0 +1,22 @@
+.parallax {
+    background: url('/public/images/japan-217882_1920.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 60vh;
+    display: flex; 
+    width: 90vw;
+    margin: 0 5vw;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .parallax {
+      background-attachment: scroll; /* Disable fixed background for mobile */
+      height: 30vh;
+    }
+  }
+  

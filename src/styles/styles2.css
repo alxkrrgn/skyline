@@ -1,0 +1,961 @@
+/* Reset some default styles */
+body, h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto sans-serif;
+  font-weight: 900;
+}
+
+/* Apply colors using CSS variables */
+html, body {
+  /*
+  background-image: linear-gradient(45deg, lightyellow 16.67%, snow 16.67%, snow 33.33%, cornsilk 33.33%, cornsilk 50%, lightyellow 50%, lightyellow 66.67%, snow 66.67%, snow 83.33%, cornsilk 83.33%, cornsilk 100%);
+  background-size: 21.21px 21.21px; 
+  background-repeat: repeat;  /* lightyellow - snow - cornsilk */
+
+  /* pinstripe white variation bg */
+  /*background-image: linear-gradient(45deg, white 16.67%, ghostwhite 16.67%, ghostwhite 33.33%, whitesmoke 33.33%, whitesmoke 50%, white 50%, white 66.67%, ghostwhite 66.67%, ghostwhite 83.33%, whitesmoke 83.33%, whitesmoke 100%);
+ /* background-size: 21.21px 21.21px; 
+  /*background-repeat: repeat;  /* white - ghostwhite - whitesmoke */
+
+     /* Prevents tiling */
+  /*background-color: lightgrey;*/
+  /*background-image: linear-gradient(to top, #09203f 0%, #537895 100%);*/
+ 
+  /*
+  background: rgba(255, 255, 255, 0.1); /* Adds glossy layer */
+  /*
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  background-color: white;
+  /*
+  background: rgb(2,0,36);
+  background: linear-gradient(54deg, rgba(2,0,36,1) 0%, rgba(101,95,136,0.5760504885547969) 87%, rgba(0,212,255,1) 100%); 
+
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  /*
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  
+  /* Light gray background for the body */
+  /*font-family: "fonts-roboto", sans-serif;*/
+  font-family: Roboto sans-serif;
+  font-weight: 900;
+  color: black;
+  margin: 0 auto;
+  /* Center the body horizontally */
+  padding-left: 0;
+  padding-right: 0;
+  overflow-x: hidden; 
+}
+/*
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(buildings-2699520.jpg);
+  background-size: cover;
+  background-color: purple;
+}
+*/
+.content {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  /*background: yellow;*/
+  background: transparent;
+}
+
+/* Styling for the header (top toolbar) */
+header {
+ /*
+/*  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+ /* backdrop-filter: blur(10px); /* Apply blur effect */
+/*  background: rgba(255, 255, 255, 0.1); /* Adds glossy layer */
+ /* box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  /* Rainbow glossy background */
+
+  background: linear-gradient(135deg, rgba(255, 0, 150, 0.2), rgba(0, 204, 255, 0.2), rgba(255, 204, 0, 0.2)); /* Rainbow gradient */
+  backdrop-filter: blur(10px); /* Standard blur for glossiness */
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3); /* Slightly darker shadow for depth */
+
+  /*background-color: lightslategray transparent;*/
+  /*color: transparent;*/
+  /*background-color: transparent;*/
+  /* transparent header background */
+  /* White header text color */
+  opacity: 1.0;
+  display: flex;
+  padding: 20px 0 0 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 10%;
+  padding-right: 15%;
+  z-index: 1000;
+  align-items: center;
+  /* Center content vertically */
+  justify-content: space-between;
+  /* Distribute content evenly */
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+}
+
+/* Styling for the left header section (logo) */
+.left-header {
+  flex: 1;
+  /* Grow to fill available space */
+  height: 100%;
+  /* Match the height of the header */
+}
+
+.left-header img {
+  max-height: 100%;
+  /* Ensure the logo fits within the height of the left header */
+  border-radius: 1%;
+  /* Add rounded corners to the logo */
+  transition: transform 2s ease-in-out;
+  /* Add a smooth scale effect on hover */
+
+}
+
+.left-header img:hover {
+  transform: scale(1.05);
+  /* Scale up the logo on hover */
+
+}
+
+.left-header .logo img {
+  position: relative; 
+  bottom: 4px;
+  float: left;
+
+}
+/* Styling for the right header section */
+nav {
+  position: sticky; 
+  top: 0;
+}
+
+/* Styling for the toolbar (right content) */
+.toolbar {
+
+  flex:1;
+  background-color: transparent;
+  /* Black toolbar background */
+  color: transparent;
+  /* White toolbar text color */
+  padding: 10px 20px;
+  text-align: right;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  /* Rounded corners at the bottom */
+  border-bottom-right-radius: 10px;
+  /* Rounded corners at the bottom */
+  /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Box shadow */
+  border-radius: 30%;
+}
+
+.toolbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toolbar li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.toolbar li:hover {
+  /*background-color: black;*/
+  background-color: none;
+}
+
+.toolbar a {
+  text-decoration: none;
+  /*color: white; */
+  color: none;
+  font-weight: bold;
+  transition: font-weight 0.3s ease-in-out;
+  /* Add a smooth font-weight change on hover */
+}
+
+.toolbar .button-89 a {
+  /*color: whitesmoke; /* Replace this with your desired color */
+  color: black;
+}
+.toolbar a .button-21 {
+  /*color: whitesmoke; /* Replace this with your desired color */
+  color: white;
+}
+
+
+/* Add hover effect for the bold option */
+.toolbar a:hover {
+ /* font-weight: bold;
+  color: yellow;*/
+  color:none
+}
+
+/* Styling for the main content section */
+main {
+  max-width: 100%;
+  /* 75% width of the page for the main content */
+  margin: 0 auto;
+  padding: 5%;
+  margin-top: 5%;
+  /* Add margin-top to create space for the fixed header */
+  border-radius: 5px;
+  /* Rounded corners for the main content */
+  /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Box shadow */
+  /*background-color: #fff; /* White background for the main content */
+  background-color: transparent;
+  /* transparent header background */
+}
+
+/* Styling for the content section */
+.content {
+  display: flex;
+  width: 100%;
+  /*border: 2px solid black;*/
+  vertical-align: middle;
+  height: 100%;
+}
+
+/* Styling for the left content section */
+.left-content {
+  flex: 1;
+  /* Graphite light grey metallic */
+  background: linear-gradient(135deg, rgba(200, 200, 200, 0.3), rgba(180, 180, 180, 0.4), rgba(160, 160, 160, 0.5)); /* Light grey gradient */
+  background-color: rgba(190, 190, 190, 0.2); /* Soft grey base color */
+  backdrop-filter: blur(5px) brightness(1.15) contrast(1.1); /* Light sheen with mild contrast */
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2); /* Softer shadow for lighter metal */
+
+   /* metallic glossy background with pinstripes with blurry effect */
+  /* background: 
+   repeating-linear-gradient(135deg, rgba(220, 220, 220, 0.3), rgba(220, 220, 220, 0.3) 10px, rgba(240, 240, 240, 0.3) 10px, rgba(240, 240, 240, 0.3) 20px), /* Pinstripe pattern */
+  /* linear-gradient(135deg, rgba(210, 210, 210, 0.3), rgba(230, 230, 230, 0.5)); /* Light grey metallic gradient */
+/*background-color: rgba(225, 225, 225, 0.2); /* Light grey base */
+/*backdrop-filter: blur(15px) brightness(1.1) contrast(1.15); /* Increased blur, sheen, and contrast */
+/*box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+
+  /*  Warm golden color */
+  /*background-color: rgba(255, 215, 0, 0.15); /* Warm golden color */
+  /*backdrop-filter: blur(10px) brightness(1.1); /* Brightness for subtle shimmer */
+ /* background: rgba(255, 223, 186, 0.2); /* Light gold layer for extra glow */
+ /* box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25); /* Shadow for rich depth */
+
+  /*background-color: #f5f5f5;  /* Light gray background for left content */
+  /*color: #333; /* Dark gray text color for left content */
+  border-radius: 10px;
+  /* Rounded corners for left content */
+  /*border: 2px solid black;*/
+  padding: 3%;
+  width: 50%;
+  top: 50%;
+  align-items: center;
+  /*background-color: lightgrey;*/
+  /* transparent header background */
+  /*padding: 20px;*/
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+
+  /*background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  /*backdrop-filter: blur(10px); /* Apply blur effect */
+  /*background: rgba(255, 255, 255, 0.1); /* Adds glossy layer */
+  /*box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+.leftNoStyle {
+  flex: 1;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+.rightNoStyle {
+  flex: 1;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+.leftNoStyle, .rightNoStyle {
+  opacity: 0;
+  transform: translateX(0); /* Initial state - no movement */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.leftNoStyle {
+  transform: translateX(-100%); /* Off-screen to the left */
+}
+
+.rightNoStyle {
+  transform: translateX(100%); /* Off-screen to the right */
+}
+
+.left-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.left-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Styling for the right content section */
+.right-content {
+  flex: 1;
+  /* Soft white for milky effect */
+ /* background-color: rgba(255, 255, 255, 0.3); /* Soft white for milky effect */
+ /* backdrop-filter: blur(20px); /* Stronger blur for smoother look */
+ /* background: rgba(255, 255, 255, 0.2); /* Adds extra layer for milky effect */
+ /* box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); /* Lighter shadow for softness */
+
+  /* Rainbow gradient */
+  /*background: linear-gradient(135deg, rgba(255, 0, 150, 0.2), rgba(0, 204, 255, 0.2), rgba(255, 204, 0, 0.2)); /* Rainbow gradient */
+  /*backdrop-filter: blur(10px); /* Standard blur for glossiness */
+ /* box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3); /* Slightly darker shadow for depth */
+
+  /* Metallic Glossy Background */
+    background: linear-gradient(135deg, rgba(192, 192, 192, 0.3), rgba(169, 169, 169, 0.2), rgba(128, 128, 128, 0.4)); /* Silver gradient */
+    background-color: rgba(200, 200, 200, 0.3); /* Semi-transparent metallic base */
+    backdrop-filter: blur(8px) brightness(1.2) contrast(1.1); /* Adds sheen and contrast */
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4); /* Darker shadow for depth */
+
+  /* Daytona Grey Metallic */
+  /*background: linear-gradient(145deg, rgba(64, 64, 70, 0.4), rgba(89, 89, 95, 0.5), rgba(48, 48, 54, 0.6)); /* Dark grey to bluish-grey gradient */
+ /* background-color: rgba(50, 50, 55, 0.3); /* Dark grey base color */
+  /*backdrop-filter: blur(6px) brightness(1.05) contrast(1.2); /* Adds sheen and contrast */
+ /* box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+  
+
+  /*background-color: #f5f5f5; /* Light gray background for left content */
+  /*color: #333; /* Dark gray text color for right content */
+  border-radius: 10px;
+  /* Rounded corners for right content */
+  /*border: 2px solid black;*/
+  padding: 3%;
+  width: 50%;
+  top: 50%;
+  /*background-color: lightgrey;*/
+  /* transparent header background */
+  align-items: center;
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow */
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  /*
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  /*backdrop-filter: blur(10px); /* Apply blur effect */
+  /*background: rgba(255, 255, 255, 0.1); /* Adds glossy layer */
+  /*box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+/* Class applied on scroll to animate elements in */
+/* Initially hide left and right content off-screen */
+.left-content, .right-content {
+  opacity: 0;
+  transform: translateX(0); /* Initial state - no movement */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.left-content {
+  transform: translateX(-100%); /* Off-screen to the left */
+}
+
+.right-content {
+  transform: translateX(100%); /* Off-screen to the right */
+}
+
+/* Class applied on scroll to animate elements in */
+.left-slide-in {
+  transform: translateX(0); /* Slide to original position */
+  opacity: 1;
+}
+
+.right-slide-in {
+  transform: translateX(0); /* Slide to original position */
+  opacity: 1;
+}
+
+.right-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.right-content img {
+  max-width: auto;
+  height: auto;
+}
+
+/* Styling for the footer */
+/* Styling for the footer */
+/* Styling for the footer */
+/* Styling for the footer */
+
+
+.logo img {
+  /* Apply initial styles */
+  transform: scale(1.0);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Add hover effect */
+.logo img:hover {
+  /* Apply animation on hover */
+  transform: scale(1.05);
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  width: 75%;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.centered2 {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  /* no text shadows */
+  /*text-shadow: 2px 2px 5px darkblue;*/
+  color: greenyellow;
+}
+
+.left-content h1 {
+  font-size: 3.0rem;
+}
+
+h4 {
+ /* font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;*/
+  font-family: Roboto sans-serif;
+  font-size: 4rem;
+  /* no text shadows */
+  /*text-shadow: 2px 2px 5px lightslategray;*/
+  color:black;
+  /*color: darkslategrey;*/
+  font-weight: 700;
+}
+
+h4:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+  opacity: 1.0;
+   /* no text shadows */
+  /*text-shadow: 2px 2px 5px lightslategray;*/
+  color: darkblue;
+  font-weight: 700;
+}
+
+h1:hover {
+transform: scale(1.05);
+transform-origin: center; /* Scale from the center */
+transition: transform 0.5s ease-in-out;
+opacity: 1.0;
+  /* no text shadows */
+
+/*text-shadow: 2px 2px 5px darkblue;*/
+color: greenyellow;
+font-weight: bold;
+will-change: transform; /* Optimize for the hover effect */
+}
+
+h2:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+  opacity: 1.0;
+    /* no text shadows */
+  /*text-shadow: 2px 2px 5px lightslategray;*/
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 50px;
+    /* no text shadows */
+  /*text-shadow: 2px 2px 5px lightslategray;*/
+
+}
+
+.second h2 {
+  font-size: 50px;
+    /* no text shadows */
+  /*text-shadow: 2px 2px 5px lightslategray;*/
+
+  color: blue;
+}
+
+.second h3 {
+  font-size: 30px;
+    /* no text shadows */
+  /*text-shadow: 2px 2px 5px lightslategray;*/
+  color: black;
+  text-align: center;
+
+}
+
+h3 {
+  font-size: 20px;
+
+}
+
+h3:hover {
+  transform: scale(1.00);
+  /*transition: transform 0.5s ease-in-out;
+  font-weight: normal;*/
+}
+
+a:link { 
+  text-decoration: none; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
+}
+
+.container {
+  display: flex;
+  position: relative;
+  text-align: center;
+  color: white;
+  max-width: 100%;
+}
+
+.fade-in-image {
+  animation: fadeIn 0.5s;
+}
+
+.fade-in-image:hover {
+  transform: scale(1.0);
+  transition: transform 1s ease-in-out;
+}
+
+.fade-in-image105 {
+  animation: fadeIn 5s;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.fade-in-image105:hover {
+  transform: scale(1.05);
+  transition: transform 0.75s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.button-71 {
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roboto sans-serif;
+  /*
+  font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif; */
+  font-size: 18px;
+  font-weight: 700;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-71:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.button-71:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .button-71 {
+    padding: 16px 48px;
+  }
+}
+
+.button-28 {
+  appearance: none;
+  background-color: whitesmoke;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roboto sans-serif;
+  font-weight: 700;
+  /*
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  */
+  font-size: 16px;
+ /* font-weight: 600;*/
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  color: #fff;
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+a .button-28 {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Use inherited text color */
+}
+
+footer {
+  background: rgba(255, 255, 255, 0.1); /* Adds glossy layer */
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  /*background-color: inherit;*/
+  /* Black footer background */
+  /*color: #fff;*/
+  /* White footer text color */
+  text-align: center;
+  padding: 0px 0;
+  z-index: 1000;
+  /* Ensure the footer is on top of other content */
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  /* Distribute content evenly horizontally */
+  align-items: center;
+  /* Center content vertically */
+  width: 100%;
+  /* Set the width of the footer to 100% */
+  border-top-left-radius: 0;
+  /* Remove rounded corners at the top */
+  border-top-right-radius: 0;
+  /* Remove rounded corners at the top */
+  /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);*/
+  /* Box shadow */
+  height: 150px;
+  /*border: 2px solid red;*/
+}
+
+.footer-content {
+  position: flex;
+  width: 100%;
+  height: 100%;
+  /*background: yellow;*/
+  background: transparent;
+}
+
+/* Styling for the right content in the footer */
+.right-footer {
+  flex: 1;
+  /*background-color: #f5f5f5;  /* Light gray background for left content */
+  /*color: #333; /* Dark gray text color for left content */
+  border-radius: 10px;
+  /* Rounded corners for left content */
+  border: 2px solid black;
+  padding: 5%;
+  width: 50%;
+  top: 50%;
+  align-items: center;
+  background-color: inherit;
+  /* transparent header background */
+  /*padding: 20px;*/
+
+  /* Add any styles you want for the right content in the footer */
+}
+
+.left-footer {
+  flex: 1;
+  /*background-color: #f5f5f5;  /* Light gray background for left content */
+  /*color: #333; /* Dark gray text color for left content */
+  border-radius: 10px;
+  /* Rounded corners for left content */
+  border: 2px solid black;
+  padding: 5%;
+  width: 50%;
+  top: 50%;
+  align-items: center;
+  background-color: inherit;
+  /* transparent header background */
+  /*padding: 20px;*/
+}
+
+/* Styling for the navigation links in the footer */
+.footer-navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /* Center-align the text within the ul element */
+}
+
+.footer-navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /* Center-align the text within the ul element */
+}
+
+.footer-navigation li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.footer-navigation a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: normal;
+  transition: font-weight 0.3s ease-in-out;
+  /* Add a smooth font-weight change on hover */
+}
+
+/* Add hover effect for the bold option in the footer navigation */
+.footer-navigation a:hover {
+  font-weight: bold;
+}
+.button-89 {
+  
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: black;
+  width: 100%;
+  padding: calc(.5em + 3px) calc(.9em + 3px);
+  color: var(--color);
+  --_p: var(--s);
+
+   /* Graphite light grey metallic */
+   /*background: linear-gradient(135deg, rgba(200, 200, 200, 0.3), rgba(180, 180, 180, 0.4), rgba(160, 160, 160, 0.5)); /* Light grey gradient */
+   /*background-color: rgba(190, 190, 190, 0.2); /* Soft grey base color */
+   /*backdrop-filter: blur(5px) brightness(1.15) contrast(1.1); /* Light sheen with mild contrast */
+   /*box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2); /* Softer shadow for lighter metal */
+  /* light grey mettalic with shattered glass */
+  /*background: 
+  repeating-linear-gradient(135deg, rgba(200, 200, 200, 0.2), rgba(180, 180, 180, 0.2) 10px, rgba(160, 160, 160, 0.3) 20px), /* Light grey metallic gradient */
+  /*radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15), transparent 30%), /* Adds light reflection spots */
+  /*repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 2px, transparent 2px, transparent 10px), /* Shattered glass pattern */
+  /*repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 2px, transparent 2px, transparent 10px); /* Adds crosshatch to enhance glass look */
+
+  /*background-color: rgba(225, 225, 225, 0.2); /* Light grey base color */
+  /*backdrop-filter: blur(8px) brightness(1.2) contrast(1.2); /* Sheen, contrast, and blur for glassy look */
+  /*box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+  /*
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  /*backdrop-filter: blur(10px); /* Apply blur effect */
+  /*background: rgba(255, 255, 255, 0.1); /* Adds glossy layer */
+  /*box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+ /* background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));*/
+  background-color: whitesmoke;
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: 3px solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+  border: 1px solid grey;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+  background-color: darkblue;
+  color: whitesmoke;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: white;
+}
+
+.button-21 {
+  outline: 0;
+  grid-gap: 8px;
+  align-items: center;
+  /*background-color: darkslategray;*/
+  /*background-color: #10182F;*/
+  background-color: darkslateblue;
+  /*
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  /*backdrop-filter: blur(10px); /* Apply blur effect */
+  /*background: rgba(255, 255, 255, 0.1); /* Adds glossy layer */
+  /*box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+
+  color: white;
+  border: 1px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 16px;
+  gap: 8px;
+  justify-content: center;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: all .14s ease-out;
+  white-space: nowrap;
+}
+
+.button-21:hover {
+  /* Removing the hover effect by keeping the button's appearance unchanged */
+  box-shadow: none; /* No shadow on hover */
+  transform: none; /* No transform on hover */
+  color: yellowgreen;
+}
+
+.button-21:focus-visible {
+  outline-offset: 1px;
+}
+
+/* CSS */
+.button-73 {
+  appearance: none;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roboto sans-serif;
+  /*
+  font-family: -apple-system,sans-serif;*/
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.button-73:hover {
+  background-color: lightslategrey;
+  box-shadow: whitesmoke 0 -6px 8px inset;
+  transform: scale(1.00);
+}
+
+.button-73:active {
+  transform: scale(1.00);
+}
+
+@media (min-width: 768px) {
+  .button-73 {
+    font-size: 1.5rem;
+    padding: .75rem 2rem;
+  }
+}
+h2 .noHover {
+  pointer-events: none;
+}
+
+/* CSS */
+.button-70 {
+  background-image: linear-gradient(#0dccea, #0d70ea);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: Roboto sans-serif;
+  font-weight: 700;
+  /*
+  font-family: Montserrat,sans-serif; */
+  font-size: .9em;
+  margin: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}

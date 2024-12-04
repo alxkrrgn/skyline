@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300');
+
+// Variables
+$btn-width: 250px !default;
+$btn-height: 80px !default;
+$bg-color: #eeeeee !default;
+
+// Utility Mixins
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// Color Functions
+@function random-color($max: 255) {
+  @return rgb(random($max), random($max), random($max));
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+@function tint($color, $percentage: 50%) {
+  @return mix(white, $color, $percentage);
+}
+
+// Base Styles
+html {
+  padding-top: 50px;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  text-align: center;
+  background-color: $bg-color;
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+    transition: 0.5s ease-in-out;
+  }
+
+  i, em, b, strong, span {
+    transition: none;
+  }
+}
+
+*:before, *:after {
+  z-index: -1;
+}
+
+h1, h4 {
+  font-family: 'Raleway', 'Open Sans', sans-serif;
+  margin: 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  line-height: $btn-height;
+  color: black;
+}
+
+.centerer {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 600px) {
+  .wrap {
+    width: 50%;
+    float: left;
+  }
+}
+
+// Button Styles
+[class^="btn-"] {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  @include size(100%, $btn-height);
+  max-width: $btn-width;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+}
+
+// Button Variants
+.btn-0 {
+  $btn-color: random-color(200);
+  $btn-color-dark: shade($btn-color, 40%);
+  color: tint($btn-color);
+
+  &:before {
+    content: '';
+    @include absolute(0, 0, 0, 0);
+    background-color: $btn-color-dark;
+    transform: translateX(-100%);
+  }
+
+  &:hover {
+    color: tint($btn-color, 75%);
+    &:before {
+      transform: translateX(0);
+    }
+  }
+}
+
+// Additional Button Variants (Similar Pattern)
+// You can repeat the above logic for other button variants, using mixins and functions for consistency.
+

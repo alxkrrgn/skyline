@@ -1,0 +1,300 @@
+header {
+    /*
+   /*  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    /* backdrop-filter: blur(10px); /* Apply blur effect */
+   /*  background: rgba(255, 255, 255, 0.1); /* Adds glossy layer */
+    /* box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+     /* Rainbow glossy background */
+   /*
+     background: linear-gradient(135deg, rgba(255, 0, 150, 0.2), rgba(0, 204, 255, 0.2), rgba(255, 204, 0, 0.2)); /* Rainbow gradient */
+   /*  backdrop-filter: blur(10px); /* Standard blur for glossiness */
+  /*   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3); /* Slightly darker shadow for depth */
+   
+     background-color: lightslategray transparent;
+     /*color: transparent;*/
+     /*background-color: transparent;*/
+     /* transparent header background */
+     /* White header text color */
+     opacity: 1.0;
+     display: flex;
+     padding: 20px 0 0 0;
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     padding-left: 10%;
+     padding-right: 15%;
+     z-index: 1000;
+     align-items: center;
+     /* Center content vertically */
+     justify-content: space-between;
+     /* Distribute content evenly */
+     border-bottom-left-radius: 0;
+     border-bottom-right-radius: 0;
+   
+   }
+   
+   /* Styling for the left header section (logo) */
+   .left-header {
+     flex: 1;
+     /* Grow to fill available space */
+     height: 100%;
+     /* Match the height of the header */
+   }
+   
+   .left-header img {
+     max-height: 100%;
+     /* Ensure the logo fits within the height of the left header */
+     border-radius: 1%;
+     /* Add rounded corners to the logo */
+     transition: transform 2s ease-in-out;
+     /* Add a smooth scale effect on hover */
+   
+   }
+   
+   .left-header img:hover {
+     transform: scale(1.05);
+     /* Scale up the logo on hover */
+   
+   }
+   
+   .left-header .logo img {
+     position: relative; 
+     bottom: 4px;
+     float: left;
+   
+   }
+   /* Styling for the right header section */
+   nav {
+     position: sticky; 
+     top: 0;
+   }
+   
+   /* Styling for the toolbar (right content) */
+   .toolbar {
+   
+     flex:1;
+     background-color: transparent;
+     /* Black toolbar background */
+     color: transparent;
+     /* White toolbar text color */
+     padding: 10px 20px;
+     text-align: right;
+     border-top-left-radius: 0;
+     border-top-right-radius: 0;
+     border-bottom-left-radius: 10px;
+     /* Rounded corners at the bottom */
+     border-bottom-right-radius: 10px;
+     /* Rounded corners at the bottom */
+     /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Box shadow */
+     border-radius: 30%;
+   }
+   
+   .toolbar ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+   }
+   
+   .toolbar li {
+     display: inline;
+     margin-left: 20px;
+   }
+   
+   .toolbar li:hover {
+     /*background-color: black;*/
+     background-color: none;
+   }
+   
+   .toolbar a {
+     text-decoration: none;
+     /*color: white; */
+     color: none;
+     font-weight: bold;
+     transition: font-weight 0.3s ease-in-out;
+     /* Add a smooth font-weight change on hover */
+   }
+   
+   .toolbar .button-89 a {
+     /*color: whitesmoke; /* Replace this with your desired color */
+     color: black;
+   }
+   .toolbar a .button-21 {
+     /*color: whitesmoke; /* Replace this with your desired color */
+     color: white;
+   }
+   
+   
+   /* Add hover effect for the bold option */
+   .toolbar a:hover {
+    /* font-weight: bold;
+     color: yellow;*/
+     color:none
+   }
+
+
+
+.hours {
+
+    display: none; /* Initially hide the hours button in CSS */
+}
+.hide1 {
+  display: none; /* Initially hide the hours button in CSS */
+}
+.hide2 {
+  display: none; /* Initially hide the hours button in CSS */
+}
+
+@media only screen and (max-width: 768px) {
+  .centered {
+    top: 50%; /* Adjusts top position in mobile view */
+  }
+  .second h2 {
+  
+    color: blue;
+    font-weight: bold;
+  }
+
+  nav {
+    background-color: none;
+    color: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+ /* Styles for the toolbar in mobile view */
+  .toolbar ul {
+  position: fixed;
+  top: 80px; /* Positioning from the top */
+  right: -70%; /* Start hidden off the screen */
+  background-color: whitesmoke;
+  width: auto; /* Half the screen width */
+  height: auto; /* Half the screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: right; /* Space items evenly */
+  align-items: right;
+  transition: right 0.3s ease; /* Smooth slide-in transition */
+  padding: 0;
+  margin: 0;
+  /*box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2); /* Add shadow for effect */
+  border-radius: 8px; /* Rounded corners */
+  padding: 7% 13% 7%;
+  }
+
+/* When the menu is open */
+  .toolbar ul.open {
+  right: -100%; /* Position to cover half the screen from the right */
+  }
+
+/* Adjust individual list items */
+ul li {
+    margin: 0px 0; /* Add more vertical spacing between items */
+    padding: 0px 0;
+    list-style: none;
+}
+
+/* Show menu when checkbox is checked */
+#check:checked ~ ul {
+    right: 0;
+}
+  /*
+  ul li {
+    margin-right: 5px;
+  }
+  */
+  ul li a  {
+    color: none;
+    text-decoration: none;
+    transition: none;
+  }
+  
+  ul li a:hover {
+    color: darkblue;
+  }
+
+  #check:checked ~ ul li {
+    opacity: 1;
+    transform: rotateY(0); /* Reset to show the page */
+}
+
+/* Sequential delay to stagger the page-turn effect */
+/*ul li:nth-child(1) { transition-delay: 0.1s; }
+ul li:nth-child(2) { transition-delay: 0.2s; }
+ul li:nth-child(3) { transition-delay: 0.3s; }
+ul li:nth-child(4) { transition-delay: 0.4s; }*/
+
+.button-21.hours, .button-89.hours {
+
+    display: block;
+}
+
+}
+
+/*
+@media only screen and (max-width: 768px) {
+  .fade-in-image::before {
+    content: "A/A/A"; /* Inserts two line breaks */
+    /*white-space: pre; /* Ensures the line breaks are rendered as new lines */
+   /* display: block; /* Ensures the line breaks take up space */
+/*  }
+}*/
+
+@media (min-width: 501px) and (max-width: 768px) {
+  .content {
+      flex-direction: row; /* Change to row for tablet */
+  }
+
+  .second h2 {
+  
+    color: blue;
+    font-weight: bold;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* CSS */
+.button-81 {
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  -webkit-text-decoration: none #0d172a solid;
+          text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-81:hover {
+  background-color: #1e293b;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .button-81 {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
+}

@@ -1,0 +1,17 @@
+.dynamic-container {
+  margin: 0; /* Remove margins for mobile screens */
+  padding: 0; /* Remove padding for mobile screens */
+}
+
+@media (max-width: 768px) {
+  .dynamic-container {
+    width: 90vw; /* Use full screen width for mobile */
+    padding: 0;
+    margin: 0;
+  }
+
+  button {
+    font-size: 16px; /* Adjust button size for mobile */
+    width: auto; /* Make the button full-width for smaller screens */
+  }
+}
