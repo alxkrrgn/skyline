@@ -37,11 +37,19 @@ const SixCardsShortCallPut = () => {
            
           </p>
         </div>
+<<<<<<< HEAD
         <div className="card" style={{ height: 'auto' }}  >
           <img src={'/images/NakedCall_AVGO_Dec24Strike185.png'} alt="Test" style={{ width: '100%' }} />
         </div>
 
         <div className="card" style={{ height: 'auto' }}>
+=======
+        <div className="cardImage" style={{ height: 'auto' }}  >
+          <img src={'/images/NakedCall_AVGO_Dec24Strike185.png'} alt="Test" style={{ width: '100%' }} />
+        </div>
+
+        <div className="cardImage" style={{ height: 'auto' }}>
+>>>>>>> d5c9181 (Initial commit)
           <img src={'/images/NakedCallChart_AVGO_Dec24Strike185_cropped.png'} alt="Test" style={{ width: '100%' }} />
         </div>
         <div className="card" style={{ height: 'auto' }}>
@@ -85,11 +93,19 @@ const SixCardsShortCallPut = () => {
            
           </p>
         </div>
+<<<<<<< HEAD
         <div className="card" style={{ height: 'auto' }} >
           <img src={'/images/NakedPut_AVGO_Dec27Strike155.png'} alt="Test" style={{ width: '100%' }} />
         </div>
 
         <div className="card" style={{ height: 'auto' }}>
+=======
+        <div className="cardImage" style={{ height: 'auto' }} >
+          <img src={'/images/NakedPut_AVGO_Dec27Strike155.png'} alt="Test" style={{ width: '100%' }} />
+        </div>
+
+        <div className="cardImage" style={{ height: 'auto' }}>
+>>>>>>> d5c9181 (Initial commit)
           <img src={'/images/Chart_AVGO_Dec022024.png'} alt="Test" style={{ width: '100%' }} />
         </div>
         <div className="card" style={{ height: 'auto' }}>

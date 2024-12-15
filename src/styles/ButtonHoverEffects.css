@@ -55,7 +55,11 @@ a {
 }
 
 .btn-0 {
+<<<<<<< HEAD
   color: #c198c0;
+=======
+  color: #d9d3cf;
+>>>>>>> d5c9181 (Initial commit)
 }
 .btn-0:before {
   content: "";
@@ -64,11 +68,19 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
+<<<<<<< HEAD
   background-color: #4f1d4d;
   transform: translateX(-100%);
 }
 .btn-0:hover {
   color: #e0cbe0;
+=======
+  background-color: #6b645f;
+  transform: translateX(-100%);
+}
+.btn-0:hover {
+  color: #ece9e7;
+>>>>>>> d5c9181 (Initial commit)
 }
 .btn-0:hover:before {
   transform: translateX(0);

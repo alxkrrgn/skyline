@@ -14,6 +14,10 @@ import FlexBoxStockOptionsPage from "./components/FlexBoxStockOptionsPage";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import GetStarted from "./components/GetStarted";
+<<<<<<< HEAD
+=======
+import Dashboard from './components/Dashboard';
+>>>>>>> d5c9181 (Initial commit)
 
 //import AOS from 'locomotive-aos'; // Example, adjust based on library docs
 import VideoBgStars from './components/VideoReactPlayerStars';
@@ -25,8 +29,15 @@ import AnimatedPixelStars from './components/AnimatedPixelStars';
 import ReactResponsive from './components/ReactResponsive';
 import CardContainer from './components/CardContainer';
 import FlexBoxStrategiesTopics from './components/FlexBoxStrategiesTopics';
+<<<<<<< HEAD
 
 
+=======
+import NavigationMenu from './components/NavigationMenu';
+
+//const mailer = require('./config/mailer'); // Correct relative path
+//app.use('/config', mailer);
+>>>>>>> d5c9181 (Initial commit)
    // Initialize AOS with custom settings
 
 //AOS.init({
@@ -60,7 +71,11 @@ function App() {
         <div className="App">
       
          <Header/>  
+<<<<<<< HEAD
          {/* 
+=======
+          {/*
+>>>>>>> d5c9181 (Initial commit)
          <AnimatedXOtriangles />
           */}
          <AnimatedPixelStars />
@@ -94,6 +109,11 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/getstarted" element={<GetStarted />} />
+<<<<<<< HEAD
+=======
+            <Route path="/navigate" element={<NavigationMenu />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+>>>>>>> d5c9181 (Initial commit)
             {/* <Route path="/about" element={<About />} /> */}
           </Routes>
         </main>     

@@ -18,7 +18,11 @@ a {
   background: transparent;
   outline: 0;
   right: 5%;
+<<<<<<< HEAD
   top: 20px;
+=======
+  top: 15px;
+>>>>>>> d5c9181 (Initial commit)
   cursor: pointer;
   border-radius: 50%;
   transition: background-color 0.15s linear;
@@ -33,6 +37,10 @@ a {
   height: var(--screen-height);
   right: 4%;
   position: relative;
+<<<<<<< HEAD
+=======
+  margin: 4vh 0 0 0;
+>>>>>>> d5c9181 (Initial commit)
   z-index: 5;
   visibility: hidden;
   list-style-type: none; /* Removes bullet points */
@@ -113,8 +121,13 @@ a {
   background-color: var(--splash-bg-color);
   border: 5px solid darkgrey;
   width: 70vw;
+<<<<<<< HEAD
   height: 90vh;
   top: -44vh;
+=======
+  height: 80vh;
+  top: -39vh;
+>>>>>>> d5c9181 (Initial commit)
   left: -35vw;
   transform: scale(0);
   transform-origin: 50% 50%;

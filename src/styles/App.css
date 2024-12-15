@@ -193,9 +193,15 @@ html, body {
      position: relative;
      justify-content: center;
      vertical-align: center;
+<<<<<<< HEAD
      top: 20px;
      left: 5px;
      bottom: 4px;
+=======
+     top: 15px; 
+     left: 5px;
+     bottom: 5px;
+>>>>>>> d5c9181 (Initial commit)
      float: left;
    }
 

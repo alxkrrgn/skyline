@@ -36,11 +36,19 @@ const SixCardsLongCallPut = () => {
            
           </p>
         </div>
+<<<<<<< HEAD
         <div className="card" style={{ height: 'auto' }}  >
           <img src={'/images/AAPL_options_table.png'} alt="Test" style={{ width: '100%' }} />
         </div>
 
         <div className="card" style={{ height: 'auto' }}>
+=======
+        <div className="cardImage" style={{ height: 'auto' }}  >
+          <img src={'/images/AAPL_options_table.png'} alt="Test" style={{ width: '100%' }} />
+        </div>
+
+        <div className="cardImage" style={{ height: 'auto' }}>
+>>>>>>> d5c9181 (Initial commit)
           <img src={'/images/AAPL_call_risk_chart.png'} alt="Test" style={{ width: '100%' }} />
         </div>
         <div className="card" style={{ height: 'auto' }}>
@@ -77,11 +85,19 @@ const SixCardsLongCallPut = () => {
            
           </p>
         </div>
+<<<<<<< HEAD
         <div className="card" style={{ height: 'auto' }} >
           <img src={'/images/AAPL_Put_chains_Oct_24.png'} alt="Test" style={{ width: '100%' }} />
         </div>
 
         <div className="card" style={{ height: 'auto' }}>
+=======
+        <div className="cardImage" style={{ height: 'auto' }} >
+          <img src={'/images/AAPL_Put_chains_Oct_24.png'} alt="Test" style={{ width: '100%' }} />
+        </div>
+
+        <div className="cardImage" style={{ height: 'auto' }}>
+>>>>>>> d5c9181 (Initial commit)
           <img src={'/images/AAPL_Put_Risk_Chart_Oct_24.png'} alt="Test" style={{ width: '100%' }} />
         </div>
         <div className="card" style={{ height: 'auto' }}>

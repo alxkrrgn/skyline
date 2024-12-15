@@ -1,9 +1,17 @@
 {
 	"folders": [
 		{
+<<<<<<< HEAD
 			"path": "."
 		},
 		{
+=======
+			"name": "skyline",
+			"path": "."
+		},
+		{
+			"name": "html",
+>>>>>>> d5c9181 (Initial commit)
 			"path": "../../../var/www/html"
 		}
 	],

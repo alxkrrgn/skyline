@@ -17,6 +17,10 @@ const GridContainer = () => {
       </div>
     </div>
     */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> d5c9181 (Initial commit)
     <div className="grid-item"><h2>Analytics and AI</h2>
     <p>We leverage mathematical and statistical methods, quantitative
     analysis, and artificial intelligence in both the design and 

@@ -1,8 +1,16 @@
 .powered-by {
   text-align: center;
   padding: 20px;
+<<<<<<< HEAD
   background-color: rgba(50, 50, 50, 0.5) transparent; /* Light grey with 50% transparency */
   margin: 5vh 0;
+=======
+  background-color: lightgrey;
+  /*background-color: rgba(50, 50, 50, 0.5); /* Light grey with 50% transparency */
+  margin: 5vh 0;
+  width: 60vw;
+  border-radius: 20px;
+>>>>>>> d5c9181 (Initial commit)
 }
 
 .powered-by p {
@@ -14,7 +22,13 @@
 
 .powered-by h2 {
     color: whitesmoke;
+<<<<<<< HEAD
   }
+=======
+    text-shadow: 2px 2px blue;
+
+}
+>>>>>>> d5c9181 (Initial commit)
 
 .logos {
   display: flex;

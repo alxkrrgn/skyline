@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 .parallax {
+=======
+.parallaxTokyo {
+>>>>>>> d5c9181 (Initial commit)
     background: url('/public/images/japan-217882_1920.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 60vh;
@@ -11,6 +15,7 @@
     text-align: center;
     font-size: 2rem;
   }
+<<<<<<< HEAD
   
   /* Mobile Responsiveness */
   @media (max-width: 768px) {
@@ -18,5 +23,50 @@
       background-attachment: scroll; /* Disable fixed background for mobile */
       height: 30vh;
     }
+=======
+  .parallaxNY {
+    background: url('/public/images/buildings-2699520.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 60vh;
+    display: flex; 
+    width: 90vw;
+    margin: 0 5vw;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .parallaxPUC {
+    background: url('/public/images/under-construction-2891888_1920.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 60vh;
+    display: flex; 
+    width: 90vw;
+    margin: 0 5vw;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .parallaxTokyo {
+      background-attachment: scroll; /* Disable fixed background for mobile */
+      height: 30vh;
+    }
+    .parallaxNY {
+      background-attachment: scroll; /* Disable fixed background for mobile */
+      height: 30vh;
+    }
+    .parallaxPUC {
+      background-attachment: scroll; /* Disable fixed background for mobile */
+      height: 30vh;
+    }
+    
+
+>>>>>>> d5c9181 (Initial commit)
   }
   

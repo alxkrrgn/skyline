@@ -1,10 +1,21 @@
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player"; // Install with `npm install react-player`
 import Hero from "./Hero"; // Import your Hero component
+<<<<<<< HEAD
 import '../styles/App.css'; // Import the CSS file for styling
 
 const ReactResponsive = () => {
 
+=======
+import { useMediaQuery } from 'react-responsive';
+import '../styles/App.css'; // Import the CSS file for styling
+
+
+const ReactResponsive = () => {
+
+  //const isMobile = useMediaQuery({ maxWidth: 768 });
+
+>>>>>>> d5c9181 (Initial commit)
   const scrollToLocation = () => {
     const locationElement = document.getElementById('location');
     if (locationElement) {
@@ -72,7 +83,11 @@ const ReactResponsive = () => {
           }}
         >
           {/*<h1 style={{ color: 'white' }}>Skyline Capital</h1>*/}
+<<<<<<< HEAD
           <h2 style={{ color: "white" }}>Investment Solutions For Everyone</h2>
+=======
+          <h1 style={{ color: "white" }}>Investment Solutions For Everyone</h1>
+>>>>>>> d5c9181 (Initial commit)
           <br />
           <button
             className="button-81" onClick={scrollToLocation}

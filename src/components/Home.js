@@ -41,6 +41,11 @@ import SixCards from './SixCards';
 import FlexBoxStrategiesTopics from './FlexBoxStrategiesTopics';
 import FullWidthTitle from './FullWidthTitle';
 import PoweredBy from './PoweredBy';
+<<<<<<< HEAD
+=======
+import GridContainerMore from './GridContainerMore';
+import { SixCardsRandom, GridContainerRandom } from './RandomCardItems';
+>>>>>>> d5c9181 (Initial commit)
 
 
 function Home() {
@@ -104,14 +109,24 @@ function Home() {
 
 <section>
 
+<<<<<<< HEAD
   <div className="parallax" >
     <h2> <TypewriterComponent /> </h2>
     <p>Jeep</p>
+=======
+  <div className="parallaxTokyo" >
+    <h2> <TypewriterComponent /> </h2>
+    <p></p>
+>>>>>>> d5c9181 (Initial commit)
   </div>
 
 </section>
 
+<<<<<<< HEAD
 <SixCards />
+=======
+<SixCardsRandom />
+>>>>>>> d5c9181 (Initial commit)
 
 {/*
   <section className="cards">
@@ -155,9 +170,15 @@ function Home() {
 
 <section>
 
+<<<<<<< HEAD
   <div className="parallax" >
     <h2>Parallax 2</h2>
     <p>Deep</p>
+=======
+  <div className="parallaxNY" >
+    <h2><TypewriterComponent /></h2>
+    <p></p>
+>>>>>>> d5c9181 (Initial commit)
   </div>
 
 </section>
@@ -178,7 +199,11 @@ function Home() {
 <AosSection />
  
 */}
+<<<<<<< HEAD
 <GridContainer />
+=======
+<GridContainerRandom />
+>>>>>>> d5c9181 (Initial commit)
 
 
 {/* 

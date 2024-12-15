@@ -108,32 +108,56 @@ const FooterResponsive = () => {
             </h5>
             <ul>
               <li>
+<<<<<<< HEAD
                 <a href="#">
+=======
+                <a href="/">
+>>>>>>> d5c9181 (Initial commit)
                   home
                 </a>
               </li>
               <li>
+<<<<<<< HEAD
                 <a href="#">
+=======
+                <a href="/about">
+>>>>>>> d5c9181 (Initial commit)
                   about
                 </a>
               </li>
               <li>
+<<<<<<< HEAD
                 <a href="#">
+=======
+                <a href="/strategies">
+>>>>>>> d5c9181 (Initial commit)
                   strategies
                 </a>
               </li>
               <li>
+<<<<<<< HEAD
                 <a href="#">
+=======
+                <a href="/contact">
+>>>>>>> d5c9181 (Initial commit)
                   contact
                 </a>
               </li>
               <li>
+<<<<<<< HEAD
                 <a href="#">
+=======
+                <a href="/">
+>>>>>>> d5c9181 (Initial commit)
                   privacy
                 </a>
               </li>
               <li>
+<<<<<<< HEAD
                 <a href="#">
+=======
+                <a href="/">
+>>>>>>> d5c9181 (Initial commit)
                   terms
                 </a>
               </li>

@@ -18,7 +18,12 @@
 
 .card {
   width: 44vw;
+<<<<<<< HEAD
   height: 40vh;
+=======
+  //height: 40vh;
+  height: auto;
+>>>>>>> d5c9181 (Initial commit)
   transform-style: preserve-3d;
   transition: transform 1.0s;
   text-wrap: wrap;

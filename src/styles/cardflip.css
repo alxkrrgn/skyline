@@ -18,7 +18,11 @@
 
 .card {
   width: 44vw;
+<<<<<<< HEAD
   height: 40vh;
+=======
+  height: auto;
+>>>>>>> d5c9181 (Initial commit)
   transform-style: preserve-3d;
   transition: transform 1s;
   text-wrap: wrap;
@@ -80,7 +84,11 @@
   }
   .card {
     width: 90vw;
+<<<<<<< HEAD
     height: 45vh;
+=======
+    height: auto;
+>>>>>>> d5c9181 (Initial commit)
     transform-style: preserve-3d;
     transition: transform 0.6s;
     margin: 0 8vw 0 2vw;

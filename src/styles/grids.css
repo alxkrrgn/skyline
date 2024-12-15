@@ -28,7 +28,11 @@
 }
 .grid-item p {
 
+<<<<<<< HEAD
   font-size: 1rem;
+=======
+  font-size: 1.25rem;
+>>>>>>> d5c9181 (Initial commit)
   margin: 0;
   line-height: 1.4; /* Improves readability */
 }

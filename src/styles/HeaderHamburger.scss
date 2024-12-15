@@ -35,7 +35,11 @@ a {
     background:transparent;
     outline:0;
     right: 5%;
+<<<<<<< HEAD
     top: 20px;
+=======
+    top: 15px;
+>>>>>>> d5c9181 (Initial commit)
     cursor:pointer;
     border-radius: 50%;
     transition:background-color .15s linear;
@@ -54,6 +58,10 @@ a {
     //height: cover;
     right: 4%;
     position:relative;
+<<<<<<< HEAD
+=======
+    margin: 4vh 0 0 0;
+>>>>>>> d5c9181 (Initial commit)
     z-index:5;
     visibility:hidden;
     list-style-type: none; /* Removes bullet points */
@@ -150,8 +158,13 @@ a {
     //left:-40vmax; // -142vmax
 
     width: 70vw ; // 284vmax;
+<<<<<<< HEAD
     height: 90vh; // 284vmax
     top:-44vh; // -142vmax
+=======
+    height: 80vh; // 284vmax
+    top:-39vh; // -142vmax
+>>>>>>> d5c9181 (Initial commit)
     left:-35vw; // -142vmax
     //right: -35vw;
     //bottom: -40vh;

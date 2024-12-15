@@ -1,14 +1,30 @@
+<<<<<<< HEAD
 /*html {
+=======
+/*
+html {
+>>>>>>> d5c9181 (Initial commit)
   width: 100%;
   height: 100%;
 }
 
+<<<<<<< HEAD
 /*
 body {
 
   font-family: $base-font-family;
   font-size: $base-font-size;
 
+=======
+body {
+  background: linear-gradient(45deg,  rgba(66, 183, 245,0.8) 0%,rgba(66, 245, 189,0.4) 100%);
+  //color: $gray;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+>>>>>>> d5c9181 (Initial commit)
 }
 */
 .overlay, .form-panel.one:before {
@@ -25,7 +41,11 @@ body {
   z-index: 15;
   position: relative;
   background: #FFFFFF;
+<<<<<<< HEAD
   width: 450px;
+=======
+  width: 22vw;
+>>>>>>> d5c9181 (Initial commit)
   border-radius: 4px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
@@ -81,7 +101,11 @@ body {
   display: block;
   margin: 0 0 10px;
   color: rgba(0, 0, 0, 0.6);
+<<<<<<< HEAD
   font-size: 35px;
+=======
+  font-size: 12px;
+>>>>>>> d5c9181 (Initial commit)
   font-weight: 500;
   line-height: 1;
   text-transform: uppercase;
@@ -120,8 +144,13 @@ body {
   background: #4285F4;
   width: 100%;
   border: 0;
+<<<<<<< HEAD
   border-radius: 0; /* 4px; */
   padding: 0; /* 12px 20px; */
+=======
+  border-radius: 4px;
+  padding: 12px 20px;
+>>>>>>> d5c9181 (Initial commit)
   color: #FFFFFF;
   font-family: inherit;
   font-size: inherit;
@@ -134,6 +163,7 @@ body {
   background: #FFFFFF;
   color: #4285F4;
 }
+<<<<<<< HEAD
 .form-group button:hover {
   outline: none;
   background: darkblue;
@@ -155,6 +185,10 @@ body {
 }
 .form-group .form-remember {
   font-size: 35px;
+=======
+.form-group .form-remember {
+  font-size: 14px;
+>>>>>>> d5c9181 (Initial commit)
   font-weight: 400;
   letter-spacing: 0;
   text-transform: none;
@@ -166,11 +200,19 @@ body {
 }
 .form-group .form-recovery {
   color: #4285F4;
+<<<<<<< HEAD
   font-size: 35px;
   text-decoration: none;
 }
 .form-panel {
   padding: 60px calc(5% + 60px) 60px 60px;
+=======
+  font-size: 14px;
+  text-decoration: none;
+}
+.form-panel {
+  padding: 30px calc(5% + 30px) 30px 30px;
+>>>>>>> d5c9181 (Initial commit)
   box-sizing: border-box;
 }
 .form-panel.one:before {
@@ -193,7 +235,11 @@ body {
   background: #4285F4;
   width: 100%;
   min-height: 100%;
+<<<<<<< HEAD
   padding: 60px calc(10% + 60px) 60px 60px;
+=======
+  padding: 30px calc(5% + 30px) 30px 30px;
+>>>>>>> d5c9181 (Initial commit)
   transition: 0.3s ease;
   cursor: pointer;
 }
@@ -212,15 +258,25 @@ body {
   left: 3%;
 }
 .form-panel.two:hover {
+<<<<<<< HEAD
   left: 0; /* 93%; */
   box-shadow: none; /*0 0 10px rgba($black, 0.2);*/
+=======
+  left: 93%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+>>>>>>> d5c9181 (Initial commit)
 }
 .form-panel.two:hover:before, .form-panel.two:hover:after {
   opacity: 0;
 }
 .form-panel.two.active {
+<<<<<<< HEAD
   left: 0; /* 10%; */
   box-shadow: none; /* 0 0 10px rgba($black, 0.2); */
+=======
+  left: 10%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+>>>>>>> d5c9181 (Initial commit)
   cursor: default;
 }
 .form-panel.two.active:before, .form-panel.two.active:after {
@@ -246,12 +302,21 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+<<<<<<< HEAD
   width: 450px;
   margin: 20px auto 100px;
 }
 .pen-footer a {
   color: #FFFFFF;
   font-size: 14px;
+=======
+  width: 22vw;
+  margin: 20px auto 40px;
+}
+.pen-footer a {
+  color: #FFFFFF;
+  font-size: 12px;
+>>>>>>> d5c9181 (Initial commit)
   text-decoration: none;
   text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.1);
 }
@@ -267,6 +332,7 @@ body {
   color: #4285F4 !important;
 }
 
+<<<<<<< HEAD
 
 @keyframes slidernbw {
   to {
@@ -298,5 +364,17 @@ body {
     font-weight: 900;
     letter-spacing: 0;
     text-transform: none;
+=======
+@media (min-width: 768px) and (max-width: 810px) {
+  .form {
+    width: 50vw;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .form {
+    width: 85vw;
+    height: auto;
+>>>>>>> d5c9181 (Initial commit)
   }
 }/*# sourceMappingURL=loginform.css.map */
