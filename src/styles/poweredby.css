@@ -1,0 +1,52 @@
+.powered-by {
+  text-align: center;
+  padding: 20px;
+  background-color: lightgrey;
+  /*background-color: rgba(50, 50, 50, 0.5); /* Light grey with 50% transparency */
+  margin: 5vh 0;
+  width: 60vw;
+  border-radius: 20px;
+}
+
+.powered-by p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: whitesmoke;
+}
+
+.powered-by h2 {
+    color: whitesmoke;
+    text-shadow: 2px 2px blue;
+
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Spacing between logos */
+  overflow: hidden; /* Hide extra content during animation */
+}
+
+.logos img {
+  width: 80px; /* Adjust size */
+  height: auto;
+  transition: transform 0.3s;
+  animation: move-logos 10s linear infinite;
+}
+
+.logos img:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+}
+
+/* Animation for the logos */
+@keyframes move-logos {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+

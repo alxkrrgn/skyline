@@ -1,0 +1,103 @@
+footer {
+  background-color: #000980;
+  /* Black footer background */
+  color: #fff;
+  /* White footer text color */
+  text-align: center;
+  padding: 0px 0;
+  z-index: 1000;
+  /* Ensure the footer is on top of other content */
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  /* Distribute content evenly horizontally */
+  align-items: center;
+  /* Center content vertically */
+  width: 100%;
+  /* Set the width of the footer to 100% */
+  border-top-left-radius: 0;
+  /* Remove rounded corners at the top */
+  border-top-right-radius: 0;
+  /* Remove rounded corners at the top */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  /* Box shadow */
+  height: 150px;
+}
+
+.footer-content {
+  position: flex;
+  width: 100%;
+  height: 100%;
+  /*background: yellow;*/
+  background: transparent;
+}
+
+/* Styling for the right content in the footer */
+.right-footer {
+  flex: 1;
+  /*background-color: #f5f5f5;  /* Light gray background for left content */
+  /*color: #333; /* Dark gray text color for left content */
+  border-radius: 10px;
+  /* Rounded corners for left content */
+  border: 2px solid black;
+  padding: 5%;
+  width: 50%;
+  top: 50%;
+  align-items: center;
+  background-color: lightgrey;
+  /* transparent header background */
+  /*padding: 20px;*/
+
+  /* Add any styles you want for the right content in the footer */
+}
+
+.left-footer {
+  flex: 1;
+  /*background-color: #f5f5f5;  /* Light gray background for left content */
+  /*color: #333; /* Dark gray text color for left content */
+  border-radius: 10px;
+  /* Rounded corners for left content */
+  border: 2px solid black;
+  padding: 5%;
+  width: 50%;
+  top: 50%;
+  align-items: center;
+  background-color: lightgrey;
+  /* transparent header background */
+  /*padding: 20px;*/
+}
+
+/* Styling for the navigation links in the footer */
+.footer-navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /* Center-align the text within the ul element */
+}
+
+.footer-navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /* Center-align the text within the ul element */
+}
+
+.footer-navigation li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.footer-navigation a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: normal;
+  transition: font-weight 0.3s ease-in-out;
+  /* Add a smooth font-weight change on hover */
+}
+
+/* Add hover effect for the bold option in the footer navigation */
+.footer-navigation a:hover {
+  font-weight: bold;
+}

@@ -1,0 +1,91 @@
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    /* Blurry background for ul */
+    .toolbar ul {
+        
+        /*
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      /*backdrop-filter: blur(10px); /* Apply blur effect */
+      /*background: rgba(255, 255, 255, 0.1); /* Adds glossy layer */
+      /*box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+
+        /* Milky glossy Backgrond */
+
+     /*   background-color: rgba(255, 255, 255, 0.3); /* Soft white for milky effect */
+     /*   backdrop-filter: blur(20px); /* Stronger blur for smoother look */
+     /*   background: rgba(255, 255, 255, 0.2); /* Adds extra layer for milky effect */
+    /*    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); /* Lighter shadow for softness */
+
+         /* Rainbow gradient */
+        /*background: linear-gradient(135deg, rgba(255, 0, 150, 0.2), rgba(0, 204, 255, 0.2), rgba(255, 204, 0, 0.2)); /* Rainbow gradient */
+        /*backdrop-filter: blur(10px); /* Standard blur for glossiness */
+        /*box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3); /* Slightly darker shadow for depth */
+
+        /* light grey mettalic with shattered glass */
+        background:
+        repeating-linear-gradient(45deg, rgba(255, 99, 71, 0.6) 20px, rgba(255, 255, 255, 0.1) 20px, rgba(135, 206, 250, 0.6) 40px),
+        repeating-linear-gradient(-45deg, rgba(255, 215, 0, 0.6) 20px, rgba(255, 255, 255, 0.1) 20px, rgba(144, 238, 144, 0.6) 40px),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), transparent 70%); /* Light reflection spot */
+    
+    background-color: rgba(250, 250, 250, 0.15); /* Soft grey background */
+    backdrop-filter: blur(4px) brightness(1.05); /* Light blur and brightness */
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3); /* Depth shadow */
+        
+
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    /* When the checkbox is checked, show the menu */
+    #check:checked ~ ul {
+        right: 0;
+    }
+
+    /* Keep checkbtn (hamburger icon) to the right of the logo */
+    .checkbtn {
+        float: left; /* Align to the right */
+        margin-right: 20px; /* Space between logo and hamburger */
+        z-index: 1001; /* Ensure it's on top of everything */
+    }
+
+    /* Style for the button inside checkbtn */
+    .checkbtn .button-21 {
+        font-size: 24px; /* Size of the bars */
+        color: black; /* Color of the icon */
+    }
+
+    /* Make sure list items are visible */
+    .toolbar ul li {
+        margin: 20px 0;
+        z-index: 1001; /* Keep li elements visible and above blur */
+        width: auto;
+    }
+
+    /* Style links inside li */
+    .toolbar ul li a {
+        font-size: 15px;
+        color: black; /* Adjust as per your theme */
+    }
+
+    /* Adjust the logo positioning */
+    .logo {
+        float: left; /* Keep the logo on the left */
+        margin-left: 0px; /* Space between the edge and logo */
+    }
+
+    /* Clear floats to maintain layout */
+    .toolbar::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+

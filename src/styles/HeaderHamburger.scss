@@ -1,0 +1,333 @@
+
+// ---------------------------
+// Vars & Helper Functions
+// ---------------------------
+
+:root {
+  --screen-width:     50%; // old value 320 px 
+  --screen-height:    50%; // old value 560 px 
+  --header-bg-color:  darkblue; // old value #673AB7
+  --splash-bg-color:  whitesmoke; // old value #368887
+}
+
+// calculate a circle's circumference based on radius
+@function circumference($r){
+  $pi: 3.141592653;
+  @return 2*$pi*$r;
+}
+
+a {
+  font-weight: 900;
+}
+// ---------------------------
+// Main Navigation Menu
+// ---------------------------
+
+.nav {
+  
+  // Toggle Button
+  &__toggle {
+    display:inline-block;
+    position:absolute;
+    z-index:10;
+    padding:0;
+    border:0;
+    background:transparent;
+    outline:0;
+    right: 5%;
+    top: 15px;
+    cursor:pointer;
+    border-radius: 50%;
+    transition:background-color .15s linear;
+    
+    &:hover,
+    &:focus {
+      background-color:#484848;// rgba(0,0,0,.5)
+    }
+  }
+  
+  &__menu {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height:var(--screen-height);
+    //height: cover;
+    right: 4%;
+    position:relative;
+    margin: 4vh 0 0 0;
+    z-index:5;
+    visibility:hidden;
+    list-style-type: none; /* Removes bullet points */
+  }
+  
+  &__item {
+    opacity:0;
+    transition: all .3s cubic-bezier(0.000, 0.995, 0.990, 1.000) .3s;
+  }
+  @for $i from 1 through 5 {
+    &__item:nth-child(#{$i}){
+      transform:translateY(-40px * $i);
+    }
+  }
+  
+  &__link {
+    color:black;
+    display:block;
+    text-align:right;
+    justify-content: right;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:1.00rem;
+    text-decoration:none;
+    padding:0.5rem;
+
+    &:hover,
+    &:focus {
+      outline:0;
+      background-color: none;// rgba(0,0,0,0.2)
+      color: blue;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+// ---------------------------
+// SVG Menu Icon
+// ---------------------------
+
+
+.menuicon {
+  display:block;
+  cursor:pointer;
+  color: white;
+  
+  transform:rotate(0deg);
+  transition: .3s cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+  
+  &__bar,
+  &__circle {
+    fill:none;
+    stroke: currentColor;
+    stroke-width:3;
+    stroke-linecap:round;
+  }
+  &__bar {
+    transform: rotate(0deg);
+    transform-origin:50% 50%;
+    transition: transform .25s ease-in-out;
+  }
+  &__circle {
+    transition: stroke-dashoffset .3s linear .1s;
+    stroke-dashoffset:circumference(23); // 23 is the <circle>'s radius
+    stroke-dasharray:circumference(23);
+  }
+}
+
+// ---------------------------
+// Circular Splash Background
+// ---------------------------
+
+.splash {
+
+  position:absolute;
+  top: 40px;
+  right:5%;
+  width: 1px;
+  height: 1px;
+  
+  &::after {
+    content:"";
+    display:block;
+    position:absolute;
+    border-radius:5%;
+    background-color:var(--splash-bg-color);
+    border: 5px solid darkgrey;
+    // screen diameter can be 142vmax at most,
+    // circle needs to be twice that size to cover it
+   // width: 80vmax; // 284vmax;
+   // height: 80vmax; // 284vmax
+    //top:-40vmax; // -142vmax
+    //left:-40vmax; // -142vmax
+
+    width: 70vw ; // 284vmax;
+    height: 80vh; // 284vmax
+    top:-39vh; // -142vmax
+    left:-35vw; // -142vmax
+    //right: -35vw;
+    //bottom: -40vh;
+
+    
+    transform: scale(0);
+    transform-origin:50% 50%;
+    transition: transform .5s cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    
+    // will-change tells the browser we plan to 
+    // animate this property in the near future
+    will-change:transform;
+  }
+}
+
+@media (max-width: 768px) {
+
+.splash {
+  position:absolute;
+  top: 40px;
+  right:5%;
+  width: 1px;
+  height: 1px;
+  
+  &::after {
+    content:"";
+    display:block;
+    position:absolute;
+    border-radius:5%;
+    background-color:var(--splash-bg-color);
+
+    // screen diameter can be 142vmax at most,
+    // circle needs to be twice that size to cover it
+   // width: 80vmax; // 284vmax;
+   // height: 80vmax; // 284vmax
+    //top:-40vmax; // -142vmax
+    //left:-40vmax; // -142vmax
+
+    width: 100vw ; // 284vmax;
+    height: 95vh; // 284vmax
+    top:-47vh; // -142vmax
+    left:-50vw; // -142vmax
+
+    transform: scale(0);
+    transform-origin:50% 50%;
+    transition: transform .5s cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    
+    // will-change tells the browser we plan to 
+    // animate this property in the near future
+    will-change:transform;
+  }
+}
+  
+  }
+
+
+// ---------------------------
+// Active State
+// ---------------------------
+
+.nav:target,
+.nav--open {
+  
+  //scale the background circle to full size
+  > .splash::after {
+    transform:scale(1);
+  }
+  
+  //animate the menu icon
+  .menuicon {
+    color:white;
+    transform:rotate(180deg);
+    
+    &__circle {
+      stroke-dashoffset:0;
+    }
+    &__bar:nth-child(1),
+    &__bar:nth-child(4) {
+      opacity:0;
+    }
+    &__bar:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    &__bar:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+  
+  //show the nav items
+  .nav {
+    &__menu {
+      visibility:visible;
+    }
+  
+    &__item {
+      opacity:1;
+      transform:translateY(0);
+    }
+  }
+}
+
+// ---------------------------
+// Demo Stuff, Ignore
+// ---------------------------
+
+body {
+  background-color:#D7D7D7 transparent;
+  font-family: 'Roboto' sans-serif;
+  height: 100vh;
+ /* display:flex;
+  flex-direction:column;
+  justify-content:center; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  //border: 5px dashed white;
+}
+
+.viewport {
+  width:var(--screen-width);
+  height:var(--screen-height);
+  margin:0 auto;
+  position:relative;
+  overflow:hidden;
+  background-color:white transparentize($color: #000000, $amount: 0);
+  //border: 2px dashed yellow;
+}
+
+.header {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Standard blur for glossiness */
+ /* box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3); /* Slightly darker shadow for depth */
+
+  width: 90vw;
+  //top: 0;
+  height: 5rem;
+  left: 5vw;
+  right: 5vw;
+  border-radius: 20px;
+  //margin: 0;
+  margin: 5px auto 0;
+  border: 5px solid grey;
+  z-index: 1000;
+}
+
+.main {
+  padding:20px;
+}
+
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(130px, 1fr));
+  grid-auto-rows: 130px;
+  grid-gap:20px;
+  
+  &__item {
+    height:100%;
+    background-color:#D8D8D8;
+    
+    &:hover,
+    &:focus {
+      background-color:#A4A4A4;
+    }
+  }
+}
+@media (max-width: 768px) {
+
+  .header {
+    width: 96vw;
+    //top: 0;
+    height: 5rem;
+    left: 1vw;
+    right: 3vw;
+    padding: 0;
+  }
+}

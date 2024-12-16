@@ -1,0 +1,112 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 91vw;
+    width: 90vw;
+    margin: 0 6vw 0 4vw; /* Replace top and bottom spacing with margin */
+    position: relative; /* Ensure grid items are positioned within the grid */
+    z-index: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    width: 44vw;
+    height: 35vh;
+    background-color: rgba(211, 211, 211, 0.5); /* Light grey with 50% transparency */
+    /*background-color: #fff transparent; */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    text-wrap: wrap;
+    -webkit-filter: invert(100%);
+    filter: invert(100%); 
+    /*width: 45vw; /* Or any value suitable for your layout */
+    padding: 1rem; /* Ensure padding around the content */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    overflow: hidden; /* Prevent content from overflowing the card */
+
+  }
+
+  .cardImage {
+    width: 44vw;
+    height: 35vh;
+    background-color: rgba(211, 211, 211, 0.5); /* Light grey with 50% transparency */
+    /*background-color: #fff transparent; */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    text-wrap: wrap;
+    //-webkit-filter: invert(100%);
+    //filter: invert(100%); 
+    /*width: 45vw; /* Or any value suitable for your layout */
+    padding: 1rem; /* Ensure padding around the content */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    overflow: hidden; /* Prevent content from overflowing the card */
+
+  }
+  
+  .card:hover {
+    /*transform: translateY(180deg); */
+    transform: none;
+  }
+  .card h1 {
+    text-wrap: wrap;
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card p {
+    font-size: 1.25rem;
+    width: 100%; /* Default to full width */
+    max-width: 45vw; /* Restrict to 45vw for larger screens */
+    word-wrap: break-word; /* Handle long words */
+    /*overflow-wrap: break-word; /* Handle long words */
+    overflow: hidden;
+    white-space: normal; /* Allow wrapping */
+    margin: 0; /* No extra margins */
+    padding: 0.5rem; /* Space for readability */
+    text-align: justify; /* Optional */
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .cards {
+      grid-template-columns: 1fr; /* Stack cards on mobile */
+      flex-direction: column; /* Stack cards vertically */
+      gap: 1rem; /* Add spacing between stacked elements */
+    }
+  
+    .card {
+      padding: 15px;
+      width: 90vw;
+      margin: 0 8vw 0 2vw;
+      height: auto;
+    }
+    .cardImage {
+      padding: 15px;
+      width: 90vw;
+      margin: 0 8vw 0 2vw;
+      height: auto;
+    }
+  
+    .card h3 {
+      font-size: 1.2rem;
+    }
+  
+    .card p {
+      max-width: 90vw; /* Adjust to fit smaller screens */
+      font-size: 1.1rem; /* Slightly smaller font size */
+      text-align: left; /* Left-align for readability */
+      
+    }
+  }
+  

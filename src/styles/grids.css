@@ -1,0 +1,145 @@
+.grid-container {
+  margin: 2vh 5vw; /* Adds top and bottom space */
+  padding: 0 1rem; /* Optional: Padding for left and right spacing */
+  box-sizing: border-box; /* Ensures padding does not affect width calculation */
+  width: 90vw;
+}
+
+.basic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem; /* Space between grid items */
+  padding: 2rem; /* Adds padding inside the grid */
+  margin: 2vh auto; /* Adds top and bottom space */
+  box-sizing: border-box; /* Ensures consistent sizing */
+}
+
+.grid-item {
+  background-color: whitesmoke;
+  color: #0e0e0e;
+  padding: 1.5rem; /* Adjust padding */
+  text-align: left;
+  border-radius: 8px;
+  box-sizing: border-box;
+  overflow-wrap: break-word; /* Handles long words */
+  word-wrap: break-word;
+  word-break: break-word;
+  text-overflow: ellipsis; /* Adds "..." if text overflows */
+}
+.grid-item p {
+
+  font-size: 1.25rem;
+  margin: 0;
+  line-height: 1.4; /* Improves readability */
+}
+
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: 10px;
+    gap: 10px;
+  }
+  
+  .grid-item {
+    background: #dedede;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  .hover-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .grid-item {
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .grid-item:hover img {
+    transform: scale(1.1);
+  }
+  .sidebar-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .sidebar {
+    background-color: whitesmoke;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  
+  .main-content {
+    background-color: #dedede;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  .nested-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+  
+  .grid-item {
+    background-color: whitesmoke;
+    padding: 1rem;
+  }
+  
+  .nested-item {
+    background-color: #0e0e0e;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 3px;
+  }
+  
+  /* Responsive Adjustments */
+
+    @media (max-width: 768px) {
+      .grid-container {
+        margin: 5vh auto; /* Reduce top and bottom space on smaller screens */
+        padding: 0 1rem; /* Narrower padding */
+      }
+    
+      .basic-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust column size */
+        padding: 1rem; /* Reduce padding */
+        margin: 10vh auto; /* Reduce spacing */
+      }
+
+      .basic-grid, 
+      .masonry-grid, 
+      .hover-grid, 
+      .sidebar-grid, 
+      .nested-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+      }
+    
+    
+      .grid-item {
+        padding: 1rem; /* Adjust padding for smaller screens */
+        width: 100%;
+      }
+    
+      .hover-grid .grid-item img {
+        transition: transform 0.2s ease; /* Smooth hover effect */
+      }
+    
+      .sidebar-grid {
+        grid-template-columns: 1fr; /* Stack sidebar and content */
+      }
+    }
+  
+  
+      

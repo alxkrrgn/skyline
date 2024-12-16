@@ -1,0 +1,39 @@
+.parallax1 {
+    background: url('/public/images/AAPL_options_table.png') no-repeat center center fixed;
+    background-size: contain;
+    height: 60vh;
+    display: flex; 
+    width: 90vw;
+    margin: 0 5vw;
+    justify-content: left;
+    align-items: left;
+    color: white;
+    text-align: left;
+    font-size: 2rem;
+  }
+  .parallax2 {
+    background: url('/public/images/AAPL_call_risk_chart.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 60vh;
+    display: flex; 
+    width: 90vw;
+    margin: 0 5vw;
+    justify-content: right;
+    align-items: right;
+    color: white;
+    text-align: right;
+    font-size: 2rem;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .parallax1 {
+      background-attachment: scroll; /* Disable fixed background for mobile */
+      height: 40vh;
+    }
+    .parallax2 {
+        background-attachment: scroll; /* Disable fixed background for mobile */
+        height: 40vh;
+      }
+  }
+  
