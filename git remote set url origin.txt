@@ -17,6 +17,14 @@ git add .
 git commit -m "Sync with main app"
 git push
 
+ssh -T git@github.com
+
+git add .
+git commit -m "Your commit message here"
+
+git push origin main
+
+git push origin branch2nd
 
 git push origin main --force
 
