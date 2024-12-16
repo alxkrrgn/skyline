@@ -66,9 +66,9 @@ function App() {
       
          <Header/>  
          {/* 
-           */}
+          
          <AnimatedXOtriangles />
-         
+         */}
          <AnimatedPixelStars />
         
         {/* <VideoBgPage /> */}

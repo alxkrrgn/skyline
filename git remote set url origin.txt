@@ -4,3 +4,18 @@ git remote set-url origin https://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@githu
 
 
 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
+
+
+git fetch origin
+git pull origin main
+git add .
+git commit -m "Resolve merge conflicts"
+
+
+cd my-app-github
+git add .
+git commit -m "Sync with main app"
+git push
+
+
+git push origin main --force
