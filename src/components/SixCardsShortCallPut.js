@@ -37,11 +37,11 @@ const SixCardsShortCallPut = () => {
            
           </p>
         </div>
-        <div className="card" style={{ height: 'auto' }}  >
+        <div className="cardImage" style={{ height: 'auto' }}  >
           <img src={'/images/NakedCall_AVGO_Dec24Strike185.png'} alt="Test" style={{ width: '100%' }} />
         </div>
 
-        <div className="card" style={{ height: 'auto' }}>
+        <div className="cardImage" style={{ height: 'auto' }}>
           <img src={'/images/NakedCallChart_AVGO_Dec24Strike185_cropped.png'} alt="Test" style={{ width: '100%' }} />
         </div>
         <div className="card" style={{ height: 'auto' }}>
