@@ -25,6 +25,8 @@ app.use(cors({
     next();
   });
   
+  app.use('/public', express.static('public'));
+
   // Example route
   app.get('/', (req, res) => {
     res.send('CORS is configured!');
