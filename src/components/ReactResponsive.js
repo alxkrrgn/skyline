@@ -39,7 +39,7 @@ const ReactResponsive = () => {
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));
 
-      console.log('Video source:', data.source);
+      //console.log('Video source:', data.source);
     // Cleanup event listener
     return () => window.removeEventListener("resize", updateMobileView);
   }, [isMobile]);
