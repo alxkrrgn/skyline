@@ -66,7 +66,7 @@ const GetStartedGit = () => {
             console.log('Post data:', Object.fromEntries(postData.entries()));
 
 
-            const response = await fetch('http://localhost/getstartedGit.php', {
+            const response = await fetch('http://backend.skyline-wealth.com/getstartedGit.php', {
                 method: 'POST',
                 body: postData, // Let the browser handle Content-Type
             });
