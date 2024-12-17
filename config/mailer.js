@@ -2,25 +2,21 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const router = express.Router();
+const cors = require('cors');
+const app = express();
 
-// Replace with your SMTP credentials
-const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  secure: false, // true for 465, false for other ports
-  auth: {
-    user: 'skylinecapitalam@gmail.com',
-    pass: '@Josh7887',
-  },
-});
+// CORS configuration
+const corsOptions = {
+  origin: 'http://localhost:3000',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
 
-router.post('/send-email', async (req, res) => {
+router.post('/config/send-email', cors(corsOptions), async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   if (!email || !message) {
-    //return res.status(400).json({ error: 'Email and message are required.' });
-    setServerMessage({ text: 'Please enter your email:', type: 'error' });
-    return;
+    return res.status(400).json({ error: 'Email and message are required.' });
   }
 
   try {
@@ -31,10 +27,21 @@ router.post('/send-email', async (req, res) => {
       text: message,
     });
 
-    res.status(200).json({ success: 'Message sent successfully!' , type: 'success'});
+    res.status(200).json({ success: 'Message sent successfully!' });
   } catch (error) {
-    res.status(500).json({ error: `Failed to send message: ${error.message}`, type: 'error' });
+    res.status(500).json({ error: `Failed to send message: ${error.message}` });
   }
+});
+
+// Your mail transporter setup
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false,
+  auth: {
+    user: 'skylinecapitalam@gmail.com',
+    pass: '@Josh7887',
+  },
 });
 
 module.exports = router;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import "../styles/buttons.css";
@@ -6,6 +6,117 @@ import "../styles/buttons.css";
 const FooterResponsive = () => {
   // Get the current year
   const currentYear = new Date().getFullYear();
+
+   const [formData, setFormData] = useState({
+          email: '',
+          name: '',
+          phonenumber: '',
+          question: '',
+      });
+  
+      const [validationMessage, setValidationMessage] = useState({ text: '', type: '' });
+      const [serverMessage, setServerMessage] = useState({ text: '', type: '' });
+  
+      //const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  
+      const validateEmail = (email) => {
+          return email.match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          );
+        };
+  
+      const handleChange = (e) => {
+          const { name, value } = e.target;
+          setFormData({ ...formData, [name]: value });
+  
+          if (name === 'email') {
+              const isValid = validateEmail(value);
+              setValidationMessage({
+                  text: isValid ? 'Valid Email' : 'Invalid Email',
+                  type: isValid ? 'success' : 'error',
+              });
+          }
+      };
+  
+      const handleSubmit = async (e) => {
+          e.preventDefault();
+  
+          if (formData.email === '' ) {
+              setServerMessage({ text: 'Please enter your email:', type: 'error' });
+              return;
+          }
+          
+          formData.name = 'Subceribe to Newsletter';
+          formData.question = 'Subceribe to Newsletter';
+          formData.phonenumber = '212-555-5555';
+
+          if (formData.name === '' ) {
+            setServerMessage({ text: 'Please enter your name:', type: 'error' });
+            return;
+          }
+  
+          if (formData.question === '' ) {
+              setServerMessage({ text: 'Please choose a question:', type: 'error' });
+              return;
+          }
+
+          try {
+              const postData = new FormData();
+              postData.append('email', formData.email);
+              postData.append('name', formData.name);
+              postData.append('phonenumber', formData.phonenumber);
+              postData.append('question', formData.question);
+          
+              console.log('Post data:', Object.fromEntries(postData.entries()));
+  
+  
+              const response = await fetch('http://localhost/getstartedGit.php', {
+                  method: 'POST',
+                  body: postData, // Let the browser handle Content-Type
+              });
+  
+              console.log('Response status:', response.status);
+          
+               // Check for server-side errors
+               if (!response.ok) {
+                  console.error('Server returned an error:', response.statusText);
+                  setServerMessage({ text: 'Server error occurred.', type: 'error' });
+                  return;
+              }
+          
+              // Parse JSON response
+               // Parse JSON response
+  
+  
+              const rawText = await response.text(); // Log raw response
+              console.log('Raw response:', rawText);
+  
+              const data = JSON.parse(rawText); // Parse JSON
+              console.log('Parsed response:', data);
+  
+              console.log('Response data:', data);
+  
+              if (data.success) {
+                setServerMessage({ text: data.message, type: 'success' });
+                /*
+                localStorage.setItem('userData', JSON.stringify(data.userData));
+                setTimeout(() => {
+                    navigate(data.redirect); // Redirect to the dashboard
+                }, 2000); */
+              // if (data.redirect) {
+             //   window.location.href = data.redirect; // Navigate to /dashboard
+                    //    }
+                 } else {
+                     setServerMessage({ text: data.error, type: 'error' });
+                 }
+             } catch (error) {
+                    console.error('Error:', error);
+                     setServerMessage({
+                    text: 'An error occurred during login.',
+                    type: 'error',
+               });
+            }
+          };
 
   return (
     
@@ -61,11 +172,29 @@ const FooterResponsive = () => {
         </div>
         <div className="col-md-6 col-lg-4">
           <div className="widget2">
-
+          <div>
+                  {serverMessage.type === 'success' ? (
+              <h3 style ={{ width: '20vw', margin: '2vh 40vw' }}
+                      className={serverMessage.type}
+                      dangerouslySetInnerHTML={{ __html: serverMessage.text }}
+              ></h3>
+                  ) : (
+              <h3  style ={{ width: '20vw', margin: '2vh 40vw' }} 
+                      className={serverMessage.type}>{serverMessage.text}</h3>
+                      )}
+          </div>
             <h5>Subscribe to Newsletter</h5>
         
-          <form action="#">
-            <input type="text" placeholder="Your email" required />
+            <form onSubmit={handleSubmit}>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email..."
+                value={formData.email}
+                onChange={handleChange}
+              />
+              <h3 style ={{ width: '10vw', margin: '2vh 45vw' }} className={validationMessage.type}>{validationMessage.text}</h3>
             <button className='button-21' type="submit">SUBSCRIBE</button>
           </form>
            {/* <div className="media">

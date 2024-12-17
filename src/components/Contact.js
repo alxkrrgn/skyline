@@ -4,7 +4,7 @@ import '../styles/loginform.css';
 import '../styles/buttons.css';
 import FormData from "form-data";
 import axios from 'axios';
-//import mailer from './config/mailer';
+//import mailer from '../config/mailer';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -68,8 +68,28 @@ const Contact = () => {
             postData.append('message', formData.message);
         
             console.log('Post data:', Object.fromEntries(postData.entries()));
-            const response = await axios.post('http://localhost:3000/send-email', postData);
+
+
+            const response = await fetch('http://localhost:5000/config/send-email', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  email: formData.email,
+                  name: formData.name,
+                  subject: formData.subject,
+                  message: formData.message,
+                }),
+              });
+
+            console.log('Response status:', response.status);
+        
+            /*
+            const response = await fetch.post('http://localhost:5000/config/send-email', postData);
+                */
             setServerMessage(response.data.success || 'Message sent successfully!');
+
           } catch (error) {
             setServerMessage(
               error.response?.data?.error || 'Failed to send message. Please try again.'

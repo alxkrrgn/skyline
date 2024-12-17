@@ -8,12 +8,12 @@ import Header from "./components/Header";
 import FooterResponsive from "./components/FooterResponsive";
 import Home from "./components/Home";
 import About from "./components/About";
-import Contact from "./components/Contact";
+import ContactGit from "./components/ContactGit";
 import Strategies from "./components/Strategies";
 import FlexBoxStockOptionsPage from "./components/FlexBoxStockOptionsPage";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import GetStarted from "./components/GetStarted";
+import GetStartedGit from "./components/GetStartedGit";
 import Dashboard from './components/Dashboard';
 
 //import AOS from 'locomotive-aos'; // Example, adjust based on library docs
@@ -66,9 +66,9 @@ function App() {
       
          <Header/>  
          {/* 
-          
+          {/*
          <AnimatedXOtriangles />
-         */}
+          */}
          <AnimatedPixelStars />
         
         {/* <VideoBgPage /> */}
@@ -94,14 +94,15 @@ function App() {
             /> */}
             <Route path="/" element={<Home />} />  {/* Define routes with the 'element' prop */}
             <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<ContactGit />} />
             <Route path="/strategies" element={<Strategies />} />
             <Route path="/stock-options" element={<FlexBoxStockOptionsPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/getstarted" element={<GetStarted />} />
+            <Route path="/getstarted" element={<GetStartedGit />} />
             <Route path="/navigate" element={<NavigationMenu />} />
             <Route path="/dashboard" element={<Dashboard />} />
+
             {/* <Route path="/about" element={<About />} /> */}
           </Routes>
         </main>     
