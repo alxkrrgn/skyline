@@ -120,7 +120,7 @@ const GetStartedGit = () => {
             <div className="form">
                 <div className="form-panel one">
                     <div className="form-header">
-                        <h1 style={{ textShadow: 'none' }}>Contact Us</h1>
+                        <h1 style={{ textShadow: 'none' }}>Get Started</h1>
                     </div>
                     <div className="form-content">
                        {/* <h3 className={serverMessage.type}>{serverMessage.text}</h3> */}
