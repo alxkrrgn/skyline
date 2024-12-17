@@ -57,7 +57,7 @@ const ReactResponsive = () => {
           //border: "3px solid orange"
         }}>
         <ReactPlayer
-          url={`https://skyline-wealth.com/public/videos/${data.source}`} // Ensure correct URL
+          url={`https://backend.skyline-wealth.com/${data.source}`} // Ensure correct URL
           playing
           loop
           muted
@@ -92,7 +92,7 @@ const ReactResponsive = () => {
       {isMobile && data.type === "image" && (
 
 <div style={{ position: 'relative', top: '0', left: '0', height: 'auto', width: '100%', right: '0', bottom: '0'}}>
-<Hero backgroundImage={`https://skyline-wealth.com/public/images/${data.source}`} />
+<Hero backgroundImage={`https://backend.skyline-wealth.com/${data.source}`} />
 <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign:'center' }}>
   <h2 style={{ color: 'white' }}>Investment Solutions For Everone</h2>
   <button
