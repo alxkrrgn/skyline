@@ -34,7 +34,7 @@ const ReactResponsive = () => {
 
     // Fetch data based on the view (desktop/mobile)
     const mode = isMobile ? "mobile" : "desktop";
-    fetch(`http://backend.skyline-wealth.com//DataVideoImageBlueStock.php?mode=${mode}`)
+    fetch(`https://backend.skyline-wealth.com//DataVideoImageBlueStock.php?mode=${mode}`)
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));

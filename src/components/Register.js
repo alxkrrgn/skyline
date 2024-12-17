@@ -62,7 +62,7 @@ const Register = () => {
         
             console.log('Post data:', Object.fromEntries(postData.entries()));
         
-            const response = await fetch('http://backend.skyline-wealth.com/register.php', {
+            const response = await fetch('https://backend.skyline-wealth.com/register.php', {
                 method: 'POST',
                 body: postData, // Let the browser handle Content-Type
             });

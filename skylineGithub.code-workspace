@@ -1,18 +1,15 @@
 {
 	"folders": [
 		{
-<<<<<<< HEAD
-			"path": "."
-		},
-		{
-=======
-			"name": "skyline",
+			"name": "skylineGithub",
 			"path": "."
 		},
 		{
 			"name": "html",
->>>>>>> d5c9181 (Initial commit)
 			"path": "../../../var/www/html"
+		},
+		{
+			"path": "../../../var/www/htmlGit"
 		}
 	],
 	"settings": {}
