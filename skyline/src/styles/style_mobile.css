@@ -1,0 +1,448 @@
+.hours {
+
+    display: none; /* Initially hide the hours button in CSS */
+}
+.hide1 {
+  display: none; /* Initially hide the hours button in CSS */
+}
+.hide2 {
+  display: none; /* Initially hide the hours button in CSS */
+}
+
+@media only screen and (max-width: 768px) {
+  .centered {
+    top: 50%; /* Adjusts top position in mobile view */
+  }
+  .second h2 {
+  
+    color: blue;
+    font-weight: bold;
+  }
+
+  nav {
+    background-color: none;
+    color: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+ /* Styles for the toolbar in mobile view */
+  .toolbar ul {
+  position: fixed;
+  top: 80px; /* Positioning from the top */
+  right: -70%; /* Start hidden off the screen */
+  background-color: whitesmoke;
+  width: auto; /* Half the screen width */
+  height: auto; /* Half the screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: right; /* Space items evenly */
+  align-items: right;
+  transition: right 0.3s ease; /* Smooth slide-in transition */
+  padding: 0;
+  margin: 0;
+  /*box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2); /* Add shadow for effect */
+  border-radius: 8px; /* Rounded corners */
+  padding: 7% 13% 7%;
+  }
+
+/* When the menu is open */
+  .toolbar ul.open {
+  right: -100%; /* Position to cover half the screen from the right */
+  }
+
+/* Adjust individual list items */
+ul li {
+    margin: 0px 0; /* Add more vertical spacing between items */
+    padding: 0px 0;
+    list-style: none;
+}
+
+/* Show menu when checkbox is checked */
+#check:checked ~ ul {
+    right: 0;
+}
+  /*
+  ul li {
+    margin-right: 5px;
+  }
+  */
+  ul li a  {
+    color: none;
+    text-decoration: none;
+    transition: none;
+  }
+  
+  ul li a:hover {
+    color: darkblue;
+  }
+
+  #check:checked ~ ul li {
+    opacity: 1;
+    transform: rotateY(0); /* Reset to show the page */
+}
+
+/* Sequential delay to stagger the page-turn effect */
+/*ul li:nth-child(1) { transition-delay: 0.1s; }
+ul li:nth-child(2) { transition-delay: 0.2s; }
+ul li:nth-child(3) { transition-delay: 0.3s; }
+ul li:nth-child(4) { transition-delay: 0.4s; }*/
+
+.button-21.hours, .button-89.hours {
+
+    display: block;
+}
+
+}
+@media (max-width: 768px) {
+
+  .content {
+    flex-direction: column;
+  }
+  .left-content, .right-content {
+    width: 100%; /* Full width on mobile */
+    padding: 5%;
+  }
+  .leftNoStyle, .rightNoStyle {
+    width: 100%; /* Full width on mobile */
+    padding: 0;
+  }
+  main {
+    padding: 2%;
+  }
+  .left-slide-in, .right-slide-in {
+    transition: transform 0.75s ease-out; /* Increase duration by 25% (from 0.6s to 0.75s, for example) */
+  }
+  /*.fade-in-image h1 {
+      font-size: 2rem; /* Smaller font size for h1 on mobile */
+  /*}
+  .fade-in-image h2 {
+      font-size: 1.5rem; /* Smaller font size for h2 on mobile */
+  /*}*/
+  .left-content h1,
+  .right-content h1 {
+    font-size: 1.6rem; /* Smaller font size for h2 on mobile */
+  }
+  .left-content h2 {
+    font-size: 1.0rem; /* Smaller font size for h1 on mobile */
+    font-weight: 300;
+    color: black;
+  }
+  .right-content h2 {
+    font-size: 1.0rem; /* Smaller font size for h2 on mobile */
+    font-weight: 300;
+    color: black;
+  } 
+  .left-content h2:hover {
+    pointer-events: none;
+  }
+  .right-content h2:hover {
+    pointer-events: none;
+  } 
+  .left-content h3:hover {
+    pointer-events: none;
+  }
+  .right-content h3:hover {
+    pointer-events: none;
+  } 
+  .fade-in-image h1 {
+    font-size: 1.2rem; /* Even smaller font size for h1 */
+  }
+  .fade-in-image h2 {
+    font-size: 1.1rem; /* Even smaller font size for h2 */
+  }
+  .button-28 h2 {
+    color: inherit;
+    font-size: 24px; /* Change font size to 12px in mobile */
+    font-weight: bold;
+  }
+  .button-73 h2 {
+    font-size: 24px; /* Change font size to 12px in mobile */
+    font-weight: bold;
+  }
+  .button-89 h2 {
+    font-size: 24px; /* Change font size to 12px in mobile */
+    font-weight: bold;
+  }
+}
+/*
+@media only screen and (max-width: 768px) {
+  .fade-in-image::before {
+    content: "A/A/A"; /* Inserts two line breaks */
+    /*white-space: pre; /* Ensures the line breaks are rendered as new lines */
+   /* display: block; /* Ensures the line breaks take up space */
+/*  }
+}*/
+
+@media (min-width: 501px) and (max-width: 768px) {
+  .content {
+      flex-direction: row; /* Change to row for tablet */
+  }
+
+  .second h2 {
+  
+    color: blue;
+    font-weight: bold;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  .left-content,
+  .right-content {
+      width: 45%; /* Adjust width for left and right content */
+      padding: 2.5%; /* Add some padding */
+      margin: 0; /* Add margin for more whitespace between elements */
+  }
+  .left-content h1,
+  .right-content h1 {
+    font-size: 1.3rem; /* Smaller font size for h2 on mobile */
+    font-weight: 300;
+  }
+
+  .left-content h2 {
+    font-size: 1.0rem; /* Smaller font size for h1 on mobile */
+    font-weight: 300;
+    color: black;
+  }
+  .right-content h2 {
+    font-size: 1.0rem; /* Smaller font size for h2 on mobile */
+    font-weight: 300;
+    color: black;
+  } 
+  .left-content h2:hover {
+    pointer-events: none;
+  }
+  .right-content h2:hover {
+    pointer-events: none;
+  } 
+  .left-content h3:hover {
+    pointer-events: none;
+  }
+  .right-content h3:hover {
+    pointer-events: none;
+  } 
+  .fade-in-image h1 {
+    font-size: 1.3rem; /* Even smaller font size for h1 */
+  }
+  .fade-in-image h2 {
+    font-size: 1.1rem; /* Even smaller font size for h2 */
+  }
+  .fade-in-image img {
+    width: 100%;
+    height: auto;
+  }
+  .fade-in-image105 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .button-28 h2 {
+    color: inherit;
+    font-size: 24px; /* Change font size to 12px in mobile */
+    font-weight: 300;
+  }
+  
+  .button-73 h2 {
+    font-size: 24px; /* Change font size to 12px in mobile */
+    font-weight: 300;
+  }
+  .button-89 h2 {
+    font-size: 24px; /* Change font size to 12px in mobile */
+    font-weight: 300;
+  }
+  .button-28:hover, .button-28:active {
+    color: whitesmoke;
+  }
+
+  .button-28 h2:hover,  .button-28 h2:active {
+    color: whitesmoke;
+  }
+  .button-89 h2:hover,  .button-89 h2:active {
+    color: whitesmoke;
+  }
+}
+
+/* For very small screens (e.g. phones) */
+@media (max-width: 500px) {
+
+    .second h2 {
+  
+        color: blue;
+        font-weight: bold;
+      }
+
+  .content {
+    flex-direction: column;
+  }
+  .left-content, .right-content {
+    width: 100%; /* Full width on mobile */
+    padding: 5%;
+  }
+  main {
+    padding: 2%;
+  }
+    .left-content h1,
+    .right-content h1 {
+      font-size: 1.3rem; /* Smaller font size for h2 on mobile */
+    }
+    /* Optional: Adjust heading sizes for mobile devices */
+    .left-content h2,
+    .right-content h2 {
+      font-size: 1.0rem; /* Smaller font size for h2 on mobile */
+      font-weight: 300;
+    }
+  
+    /* Optional: Adjust other elements as needed */
+    .fade-in-image h1 {
+      font-size: 1.3rem; /* Adjusted font size for h1 */
+      font-weight: bold;
+    }
+  
+    .fade-in-image h2 {
+      font-size: 1.1rem; /* Adjusted font size for h2 */
+      font-weight: bold;
+    }
+  
+    /* Ensure any button text is appropriately sized */
+    .button-28 h2,
+    .button-73 h2,
+    .h2 {
+      color: inherit;
+      font-size: 20px; /* Button font size for mobile */
+    }
+    .fade-in-image105 img {
+      width: 100%;
+      height: auto /* Even smaller font size for h1 */
+    }
+    .button-28:hover, .button-28:active {
+      color: whitesmoke;
+    }
+
+    .button-28 h2:hover, .button-28 h2:active {
+      color: whitesmoke;
+    }
+    .button-89 h2:hover, .button-89 h2:active {
+      color: whitesmoke;
+    }
+}
+
+.mobile-video {
+  display: none;
+}
+.mobile-content {
+  display: none;
+}
+
+/* Show mobile video and hide desktop video on mobile */
+@media (max-width: 768px) {
+  .desktop-video {
+      display: none;
+  }
+  .mobile-video {
+      display: block;
+  }
+  .desktop-content {
+    display: none;
+  }
+  .mobile-content {
+    display: block;
+}
+
+}
+
+.videosize {
+  position:relative;
+  z-index:-1;
+  top:0;
+  left:0;
+  width:30%; 
+  height:30%;
+  object-fit: contain;
+}
+
+.fullscreen-video-wrap video{
+  position: absolute;
+  max-width: 100vw;
+  height: auto;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index:-1;
+}
+
+.fullscreen-video{
+  width:100%;
+  height:auto;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+}
+.video-container video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%; 
+  min-height: 100%; 
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+video {
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+}
+/* CSS */
+.button-81 {
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  -webkit-text-decoration: none #0d172a solid;
+          text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-81:hover {
+  background-color: #1e293b;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .button-81 {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
+}

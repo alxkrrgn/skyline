@@ -1,0 +1,290 @@
+/* Importing Google font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: Roboto sans-serif;
+  font-weight: 700;
+}
+/*
+.mobile-footer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 100%;
+  background: #10182F;
+  border-radius: 6px;
+  display: flex; /* Hide mobile footer on desktop */
+/*}*/
+
+.mobile-footer {
+  position: fixed; /* Stick to the bottom on mobile */
+  bottom: 0; /* Align to the bottom */
+  left: 0;
+  width: 100%; /* Full width */
+  background-color: #10182F;
+  padding: 20px;
+  border-radius: 6px 6px 0 0; /* Rounded corners at the top */
+  display: none; /* Initially hidden */
+  z-index: 1000; /* Ensure it stays above other content */
+  /*border-radius: 10px;
+  border: 2px solid red;*/
+}
+
+p {
+  color: whitesmoke;
+}
+
+.mobile-footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+  color: lightgrey;
+  font-size: 1.2rem;
+  font-weight: 1000;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+  display: block;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489C6 ;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+ .footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: #cecccc;
+}
+/*
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+*/
+.footer-col .icons i {
+  color: #afb6c7;
+}
+
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+
+.footer-col {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;     /* Center content vertically */
+}
+
+.footer-col .icons {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  align-items: center;     /* Center icons vertically */
+  gap: 30px;               /* Space between icons */
+  cursor: pointer;
+  text-align: center;
+  margin-top: 30px;
+}
+/*
+@media (max-width: 768px) {
+  .mobile-footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+*/
+  .mobile-footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+
+  .footer-col form {
+    display: block;
+  }
+
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+
+  .responsive-video {
+    width: 550px;
+    height: 500px;
+  }
+
+  /* Mobile footer styles */
+@media (max-width: 768px) {
+  .footer {
+    display: none; /* Hide the desktop footer */
+  }
+
+  .mobile-footer {
+    /*
+    background: rgba(255, 255, 255, 0.1); /* Adds glossy layer */
+    /*box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    /*background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    /*backdrop-filter: blur(10px); /* Apply blur effect */
+    display: block;
+    position: relative; /* No fixed position */
+    width: 100%;
+    padding: 20px;
+    background-color: #10182F; /* Mobile footer background */
+    margin-top: 100%;
+    margin-bottom: 0;
+  }
+
+  /* Heading styles for footer columns */
+  .mobile-footer h4 {
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .mobile-footer h4:hover {
+    margin-bottom: 10px;
+    color: yellow;
+    text-decoration: underline;
+    transform: scale(1.05);
+  }
+
+  .footer-col .links li a {
+    text-decoration: none;
+    color: whitesmoke;
+    z-index: 10;
+    overflow-y: auto; /* Allow scrolling if content exceeds view height */
+  }
+  /* List styling */
+ /* Make sure the list is displayed properly */
+.mobile-footer ul.links {
+  list-style: none; /* Removes bullets */
+  padding: 0;
+  margin: 0;
+  display: block; /* Ensures the <ul> is block-level */
+  overflow: visible; /* Ensure the list isn't hidden */
+}
+
+/* List items */
+.mobile-footer ul.links li {
+  margin-bottom: 10px; /* Add space between list items */
+  color: yellow;
+  display: block; /* Ensures the <ul> is block-level */
+}
+
+/* Links inside list items */
+.mobile-footer ul.links li a {
+  color: lightgreen; /* Ensure links are white for visibility */
+  text-decoration: none; /* No underline by default */
+  display: block; /* Ensures the <ul> is block-level */
+}
+
+/* Hover effect for links */
+.mobile-footer ul.links li a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.mobile-footer .footer-col {
+  display: block; /* Ensure column is visible */
+  width: 100%;
+  margin-bottom: 20px; /* Add spacing between columns */
+}
+
+/* Fix ul visibility */
+.mobile-footer .footer-col ul.links {
+  list-style-type: none; /* Remove bullets */
+  padding: 0;
+  margin: 0;
+  display: block; /* Ensure the list is displayed */
+  color: white; /* Make sure text color is visible */
+  overflow: visible; /* Prevent content from being hidden */
+}
+
+/* Ensure list items are displayed correctly */
+.mobile-footer .footer-col ul.links li {
+  margin-bottom: 10px; /* Add space between list items */
+  display: list-item; /* Explicitly set list item display */
+}
+
+/* Style the links */
+.footer-col ol.links li a {
+  color: white; /* Ensure text is visible on dark background */
+  text-decoration: none; /* No underline */
+}
+
+.footer-col ol.links li a:hover {
+  color: yellow; /* Ensure text is visible on dark background */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.responsive-video {
+  width: 450px;
+  height: 300px;
+}
+
+}
