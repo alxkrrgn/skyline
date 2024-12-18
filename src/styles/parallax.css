@@ -42,15 +42,16 @@
   @media (max-width: 768px) {
     .parallaxTokyo {
       background-attachment: scroll; /* Disable fixed background for mobile */
-      height: 30vh;
+      height: 40vh;
     }
     .parallaxNY {
       background-attachment: scroll; /* Disable fixed background for mobile */
-      height: 30vh;
+      height: 40vh;
     }
     .parallaxPUC {
       background-attachment: scroll; /* Disable fixed background for mobile */
-      height: 30vh;
+      height: 40vh;
+    
     }
     
 

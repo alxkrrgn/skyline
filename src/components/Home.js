@@ -104,14 +104,17 @@ function Home() {
 
 <FlexBoxStrategiesTopics />
 
+{/*  
 <section>
-
+*/}
   <div className="parallaxTokyo" >
     <h2> <TypewriterComponent /> </h2>
     <p></p>
   </div>
 
+{/*  
 </section>
+*/}
 
 <SixCardsRandom />
 
@@ -154,15 +157,18 @@ function Home() {
       
     </div>
     */}
-
+{/*  
 <section>
+*/}
 
   <div className="parallaxNY" >
     <h2><TypewriterComponent /></h2>
     <p></p>
   </div>
 
+{/*  
 </section>
+*/}
 
 {/* 
 <section>
