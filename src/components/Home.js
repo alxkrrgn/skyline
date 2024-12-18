@@ -107,11 +107,13 @@ function Home() {
 {/*  
 <section>
 */}
+
+<div className="spacer">
   <div className="parallaxTokyo" >
     <h2> <TypewriterComponent /> </h2>
     <p></p>
   </div>
-
+</div>
 {/*  
 </section>
 */}
@@ -160,12 +162,12 @@ function Home() {
 {/*  
 <section>
 */}
-
+<div className="spacer">
   <div className="parallaxNY" >
     <h2><TypewriterComponent /></h2>
     <p></p>
   </div>
-
+</div>
 {/*  
 </section>
 */}

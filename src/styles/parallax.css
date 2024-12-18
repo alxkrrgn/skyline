@@ -1,7 +1,7 @@
 .parallaxTokyo {
     background: url('/public/images/japan-217882_1920.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 60vh;
+    height: 75vh;
     display: flex; 
     width: 90vw;
     margin: 0 5vw;
@@ -14,7 +14,7 @@
   .parallaxNY {
     background: url('/public/images/buildings-2699520.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 60vh;
+    height: 75vh;
     display: flex; 
     width: 90vw;
     margin: 0 5vw;
@@ -27,7 +27,7 @@
   .parallaxPUC {
     background: url('/public/images/under-construction-2891888_1920.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 60vh;
+    height: 75vh;
     display: flex; 
     width: 90vw;
     margin: 0 5vw;

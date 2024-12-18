@@ -32,7 +32,8 @@ main {
   height: 100%;
 }
 .spacer {
-  margin-top: 20vh; /* Default for desktop */
+  margin-top: 30vh; /* Default for desktop */
+  margin-bottom: 30vh; /* Default for desktop */
 
 }
 
@@ -47,7 +48,8 @@ section {
 */
 @media (max-width: 768px) {
   .spacer {
-    margin-top:10vh; /* For mobile */
+    margin-top: 2vh; /* Default for desktop */
+    margin-bottom: 2vh; /* Default for desktop */
 
   }
   .spacer1 {
