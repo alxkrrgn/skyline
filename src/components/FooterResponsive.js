@@ -2,10 +2,21 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import "../styles/buttons.css";
+import { css } from '@emotion/react';
 
 const FooterResponsive = () => {
   // Get the current year
   const currentYear = new Date().getFullYear();
+
+  const responsiveStyle = css`
+  width: 20vw;
+  margin: 2vh 40vw;
+
+  @media (max-width: 768px) {
+    width: 80vw; /* Adjust width for mobile */
+    margin: 2vh 10vw; /* Adjust margin for mobile */
+  }
+`;
 
    const [formData, setFormData] = useState({
           email: '',
@@ -174,12 +185,12 @@ const FooterResponsive = () => {
           <div className="widget2">
           <div>
                   {serverMessage.type === 'success' ? (
-              <h3 style ={{ width: '20vw', margin: '2vh 40vw' }}
-                      className={serverMessage.type}
-                      dangerouslySetInnerHTML={{ __html: serverMessage.text }}
-              ></h3>
+              <h3 css={responsiveStyle} //style ={{ width: '20vw', margin: '2vh 40vw' }}   
+              className={serverMessage.type}
+              dangerouslySetInnerHTML={{ __html: serverMessage.text }}
+                ></h3>
                   ) : (
-              <h3  style ={{ width: '20vw', margin: '2vh 40vw' }} 
+                   <h3 css={responsiveStyle} //style ={{ width: '20vw', margin: '2vh 40vw' }} 
                       className={serverMessage.type}>{serverMessage.text}</h3>
                       )}
           </div>
@@ -194,7 +205,8 @@ const FooterResponsive = () => {
                 value={formData.email}
                 onChange={handleChange}
               />
-              <h3 style ={{ width: '10vw', margin: '2vh 45vw' }} className={validationMessage.type}>{validationMessage.text}</h3>
+              <h3 css={responsiveStyle} //style ={{ width: '10vw', margin: '2vh 45vw' }} 
+              className={validationMessage.type}>{validationMessage.text}</h3>
             <button className='button-21' type="submit">SUBSCRIBE</button>
           </form>
            {/* <div className="media">
