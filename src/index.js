@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; // React 18+
-import '/styles/index.css'; // Import global styles (optional)
+import './styles/index.css'; // Import global styles (optional)
 import App from './App'; // Import the main App component
 
 /*
