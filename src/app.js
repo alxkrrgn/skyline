@@ -22,6 +22,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 // Serve static files from 'public' folder
 app.use('/public', express.static('public'));
 
+app.use('/sitemap.xml', express.static(path.join(__dirname, 'public', 'sitemap.xml')));
+
 // Serve sitemap.xml
 app.get('/sitemap.xml', async (req, res) => {
   try {
