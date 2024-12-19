@@ -6,6 +6,10 @@ const path = require('path');
 const { SitemapStream, streamToPromise } = require('sitemap'); // Ensure this is installed via npm
 const app = express();
 
+
+app.use(express.json());
+app.use(cors());
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -41,16 +45,10 @@ app.get('/sitemap.xml', async (req, res) => {
   }
 });
 
-
-/*
-
 // Catch-all route to serve the React app for all other requests
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
-
-*/
-
 
 // Middleware
 app.use(cors({
