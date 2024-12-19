@@ -198,7 +198,6 @@ function Home() {
 <AosSection />
  
 */}
-<GridContainerRandom />
 
 <a href="/getstarted" >
 <button
@@ -209,6 +208,11 @@ function Home() {
   Get Started
 </button>
 </a>
+
+
+<GridContainerRandom />
+
+
 
 {/* 
 <FlipCards />
