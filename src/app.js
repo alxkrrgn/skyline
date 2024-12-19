@@ -6,6 +6,21 @@ const path = require('path');
 const { SitemapStream, streamToPromise } = require('sitemap'); // Ensure this is installed via npm
 const app = express();
 
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
+// Serve the sitemap.xml explicitly
+app.get('/sitemap.xml', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'sitemap.xml'));
+});
+
+// Catch-all route to serve the React app for all other requests
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 // Middleware
 app.use(cors({
   origin: 'http://localhost:3000', // Adjust based on your frontend URL
@@ -17,10 +32,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Serve React build files
-app.use(express.static(path.join(__dirname, 'build')));
 
 // Serve static files from 'public' folder
-app.use('/public', express.static('public'));
+//app.use('/public', express.static('public'));
 
 app.use('/sitemap.xml', express.static(path.join(__dirname, 'public', 'sitemap.xml')));
 
@@ -51,7 +65,7 @@ app.get('/sitemap.xml', async (req, res) => {
 app.get('/api/example', (req, res) => {
   res.json({ message: 'API is working!' });
 });
-
+/*
 // Fallback to React for other routes
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
@@ -62,7 +76,7 @@ app.all('*', (req, res) => {
   console.log('Request Method:', req.method, 'Request URL:', req.originalUrl);
   res.status(404).send('Route not found');
 });
-
+*/
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
