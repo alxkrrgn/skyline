@@ -209,17 +209,6 @@ function Home() {
  
 */}
 
-<a href="/getstarted" >
-<button
-  className="button-81" 
-  // data-aos="fade-in"
-  //data-aos-duration={1000} 
->
-  Get Started
-</button>
-</a>
-
-
 <GridContainerRandom />
 
 
