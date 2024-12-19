@@ -26,7 +26,7 @@ app.get('/sitemap.xml', (req, res) => {
 app.get('/sitemap.xml', async (req, res) => {
   try {
     const sitemap = new SitemapStream({ hostname: 'https://skyline-wealth.com' });
-    
+
     sitemap.write({ url: '/', changefreq: 'daily', priority: 1.0 });
     sitemap.write({ url: '/strategies', changefreq: 'weekly', priority: 0.8 });
     sitemap.write({ url: '/contact', changefreq: 'weekly', priority: 0.6 });
@@ -65,11 +65,6 @@ app.use(cors({
 // Serve static files from 'public' folder
 //app.use('/public', express.static('public'));
 
-
-// Example route
-app.get('/api/example', (req, res) => {
-  res.json({ message: 'API is working!' });
-});
 /*
 // Fallback to React for other routes
 app.get('*', (req, res) => {
