@@ -4,8 +4,18 @@ const express = require('express');
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
 const app = express();
 
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/sitemap.xml', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'sitemap.xml'));
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.get('/', (req, res) => {
     res.send('Express is working!');
@@ -23,6 +33,18 @@ app.use(cors({
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS'); // Allowed methods
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Allowed headers
     next();
+  });
+  
+  app.get('/sitemap.xml', async (req, res) => {
+    const sitemap = new SitemapStream({ hostname: 'https://skyline-wealth.com' });
+    sitemap.write({ url: '/', changefreq: 'daily', priority: 1.0 });
+    sitemap.write({ url: '/strategies', changefreq: 'weekly', priority: 0.8 });
+    // Add more URLs dynamically here
+    sitemap.end();
+  
+    const xmlData = await streamToPromise(sitemap);
+    res.header('Content-Type', 'application/xml');
+    res.send(xmlData);
   });
   
   app.use('/public', express.static('public'));
@@ -57,12 +79,12 @@ app.post('/register', async (req, res) => {
     }
 });
 */
-
+/*
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
-
+*/
 app.all('*', (req, res) => {
     console.log('Request Method:', req.method, 'Request URL:', req.originalUrl);
     res.status(404).send('Route not found');
@@ -76,3 +98,7 @@ app.listen(5000, () => {
     console.log('Server is running on http://localhost:5000');
   });
   */
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
