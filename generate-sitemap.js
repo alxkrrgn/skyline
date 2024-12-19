@@ -2,7 +2,7 @@ const { SitemapStream, streamToPromise } = require('sitemap');
 const { createWriteStream } = require('fs');
 
 (async () => {
-  const sitemap = new SitemapStream({ hostname: 'https://yourwebsite.com' });
+  const sitemap = new SitemapStream({ hostname: 'https://skyline-wealth.com' });
 
   sitemap.write({ url: '/', changefreq: 'daily', priority: 1.0 });
   sitemap.write({ url: '/strategies', changefreq: 'weekly', priority: 0.8 });
