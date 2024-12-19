@@ -41,10 +41,16 @@ app.get('/sitemap.xml', async (req, res) => {
   }
 });
 
+
+/*
+
 // Catch-all route to serve the React app for all other requests
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+
+*/
+
 
 // Middleware
 app.use(cors({
@@ -52,8 +58,6 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
-
-
 
 // Serve React build files
 
