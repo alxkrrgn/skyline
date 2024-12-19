@@ -120,6 +120,16 @@ function Home() {
 
 <SixCardsRandom />
 
+<a href="/getstarted" >
+<button
+  className="button-81" 
+  // data-aos="fade-in"
+  //data-aos-duration={1000} 
+>
+  Get Started
+</button>
+</a>
+
 {/*
   <section className="cards">
   <div className="card">
@@ -190,6 +200,15 @@ function Home() {
 */}
 <GridContainerRandom />
 
+<a href="/getstarted" >
+<button
+  className="button-81" 
+  // data-aos="fade-in"
+  //data-aos-duration={1000} 
+>
+  Get Started
+</button>
+</a>
 
 {/* 
 <FlipCards />
