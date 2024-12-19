@@ -92,6 +92,13 @@ function App() {
                 </>
               }
             /> */}
+            
+        {/* Define a route to explicitly serve sitemap.xml if needed */}
+        <Route exact path="/sitemap.xml">
+          {/* This would be unnecessary if Amplify is handling it, but you can add static XML response here */}
+        </Route>
+        {/* Other routes go here */}
+      
             <Route path="/" element={<Home />} />  {/* Define routes with the 'element' prop */}
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<ContactGit />} />
