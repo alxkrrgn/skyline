@@ -44,6 +44,7 @@
     "react-typewriter-effect": "^1.1.0",
     "redux": "^5.0.1",
     "redux-logger": "^3.0.6",
+    "sitemap": "^8.0.0",
     "styled-components": "^6.1.13",
     "tsparticles": "^3.6.0",
     "video-react": "^0.16.0"
