@@ -26,6 +26,7 @@ app.get('/sitemap.xml', (req, res) => {
 app.get('/sitemap.xml', async (req, res) => {
   try {
     const sitemap = new SitemapStream({ hostname: 'https://skyline-wealth.com' });
+    
     sitemap.write({ url: '/', changefreq: 'daily', priority: 1.0 });
     sitemap.write({ url: '/strategies', changefreq: 'weekly', priority: 0.8 });
     sitemap.write({ url: '/contact', changefreq: 'weekly', priority: 0.6 });
@@ -37,6 +38,8 @@ app.get('/sitemap.xml', async (req, res) => {
     sitemap.end();
 
     const xmlData = await streamToPromise(sitemap);
+    console.log('Generated Sitemap:', xmlData.toString()); 
+
     res.header('Content-Type', 'application/xml');
     res.send(xmlData);
   } catch (err) {
