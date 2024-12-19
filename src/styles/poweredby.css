@@ -6,6 +6,7 @@
   margin: 5vh 0;
   width: 60vw;
   border-radius: 20px;
+  overflow-x: hidden;
 }
 
 .powered-by p {

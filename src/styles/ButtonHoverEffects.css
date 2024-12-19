@@ -55,7 +55,7 @@ a {
 }
 
 .btn-0 {
-  color: #9ce0e3;
+  color: #82a09b;
 }
 .btn-0:before {
   content: "";
@@ -64,11 +64,11 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #227377;
+  background-color: #032621;
   transform: translateX(-100%);
 }
 .btn-0:hover {
-  color: #cdeff1;
+  color: #c1cfcd;
 }
 .btn-0:hover:before {
   transform: translateX(0);
