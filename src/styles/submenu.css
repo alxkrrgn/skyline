@@ -1,0 +1,80 @@
+/* Existing toolbar styling remains the same */
+
+/* Submenu hidden by default */
+.submenu {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #444;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+/* Show submenu on hover */
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+/* Styling for submenu items */
+.submenu li a {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    color: white;
+    display: block;
+    white-space: nowrap;
+}
+
+.submenu li a:hover {
+    background-color: #555;
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+    .checkbtn {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        background-color: lightslategrey;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+    }
+
+    ul li {
+        margin: 20px 0;
+    }
+
+    #check:checked ~ ul {
+        right: 0;
+    }
+
+    .button-21 {
+        width: 100%;
+        text-align: left;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+    }
+
+    .submenu li a {
+        font-size: 15px;
+        padding: 10px;
+        text-align: center;
+    }
+}
+

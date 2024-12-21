@@ -1,0 +1,15 @@
+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
+
+git init
+
+git remote add origin git@github.com:alxkrrgn/skyline.git
+
+git remote -v
+
+git add .
+
+git commit -m "Initial commit"
+
+git branch -M main
+git push -u origin main
+

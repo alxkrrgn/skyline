@@ -1,0 +1,14 @@
+
+rsync -avz --exclude 'node-modules' --exclude '.git' --exclude '.env' -e 'ssh -i ~/.ssh/skyline.pem' . ubuntu@ec2-52-53-149-57.us-west-1.compute.amazonaws.com:~/skyline
+
+rsync -avz --exclude 'node-modules' --exclude '.git' --exclude '.env' -e 'ssh -i ~/.ssh/skyline.pem' . ubuntu@54.241.152.118:~/skyline
+
+sudo systemctl daemon-reload
+
+sudo systemctl enable skyline.service
+
+sudo systemctl start skyline.service
+
+
+sudo systemctl status skyline.service
+

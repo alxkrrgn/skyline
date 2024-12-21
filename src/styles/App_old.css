@@ -1,0 +1,217 @@
+/* Reset some default styles */
+body, h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto sans-serif + serif;
+  font-weight: 900;
+  width: 91vw;
+  height: 100%;
+}
+html, body {
+  /*
+  background-image: linear-gradient(45deg, lightyellow 16.67%, snow 16.67%, snow 33.33%, cornsilk 33.33%, cornsilk 50%, lightyellow 50%, lightyellow 66.67%, snow 66.67%, snow 83.33%, cornsilk 83.33%, cornsilk 100%);
+  background-size: 21.21px 21.21px; 
+  background-repeat: repeat;  /* lightyellow - snow - cornsilk */
+
+  /* pinstripe white variation bg */
+  /*background-image: linear-gradient(45deg, white 16.67%, ghostwhite 16.67%, ghostwhite 33.33%, whitesmoke 33.33%, whitesmoke 50%, white 50%, white 66.67%, ghostwhite 66.67%, ghostwhite 83.33%, whitesmoke 83.33%, whitesmoke 100%);
+ /* background-size: 21.21px 21.21px; 
+  /*background-repeat: repeat;  /* white - ghostwhite - whitesmoke */
+
+     /* Prevents tiling */
+  /*background-color: lightgrey;*/
+  /*background-image: linear-gradient(to top, #09203f 0%, #537895 100%);*/
+ 
+  /*
+  background: rgba(255, 255, 255, 0.1); /* Adds glossy layer */
+  /*
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  background-color: inherit;
+  max-width: 95vw;
+  margin: 0;
+  padding: 0;
+  /*
+  background: rgb(2,0,36);
+  background: linear-gradient(54deg, rgba(2,0,36,1) 0%, rgba(101,95,136,0.5760504885547969) 87%, rgba(0,212,255,1) 100%); 
+
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  /*
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  
+  /* Light gray background for the body */
+  /*font-family: "fonts-roboto", sans-serif;*/
+  font-family: Roboto sans-serif + serif;
+  font-weight: 900;
+  color: black;
+  overflow-x: hidden; 
+  overflow-y: auto;
+}
+
+section {
+  display: block; 
+  width: auto; 
+  height: auto; 
+  background: transparent; 
+  text-align: initial; 
+  justify-content: initial; 
+  align-items: initial; 
+  align-content: initial; 
+  box-sizing: border-box;
+}
+
+h1 {
+ /* font-size: 4rem; */
+  font-size: clamp(1.6rem, 15vw, 3.2rem);
+  /* no text shadows */
+  /*text-shadow: 2px 2px 5px darkblue;*/
+  color: black;
+
+}
+
+.left-content h1 {
+  font-size: 3.0rem;
+}
+
+h4 {
+ /* font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;*/
+  font-family: inherit;
+  font-size: 4rem;
+  /* no text shadows */
+  /*text-shadow: 2px 2px 5px lightslategray;*/
+  color:black;
+  /*color: darkslategrey;*/
+  font-weight: 700;
+}
+
+h4:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+  opacity: 1.0;
+   /* no text shadows */
+  /*text-shadow: 2px 2px 5px lightslategray;*/
+  color: darkblue;
+  font-weight: 700;
+}
+
+h1:hover {
+/*transform: scale(1.05);*/
+transform-origin: center; /* Scale from the center */
+/*transition: transform 0.5s ease-in-out;*/
+opacity: 1.0;
+  /* no text shadows */
+
+/*text-shadow: 2px 2px 5px darkblue;*/
+color: navy;
+/*font-weight: bold;*/
+will-change: transform; /* Optimize for the hover effect */
+}
+
+h2:hover {
+  /*transform: scale(1.05);*/
+  transition: transform 0.5s ease-in-out;
+  opacity: 1.0;
+    /* no text shadows */
+  /*text-shadow: 2px 2px 5px lightslategray;*/
+  /*font-weight: bold;*/
+  color: blue;
+
+}
+
+h2 {
+  font-size: clamp(1.3rem, 10vw, 2.6rem);
+  /*font-size: 50px;*/
+    /* no text shadows */
+  /*text-shadow: 2px 2px 5px lightslategray;*/
+
+}
+
+.second h2 {
+  font-size: 50px;
+    /* no text shadows */
+  /*text-shadow: 2px 2px 5px lightslategray;*/
+
+  color: blue;
+}
+
+.second h3 {
+  font-size: 30px;
+    /* no text shadows */
+  /*text-shadow: 2px 2px 5px lightslategray;*/
+  color: black;
+  text-align: center;
+
+}
+
+h3 {
+  font-size: clamp(0.75rem, 45vw, 1.5rem);
+  font-weight: 300;
+  /*font-size: 20px;*/
+  /*-webkit-filter: invert(100%);
+  filter: invert(100%);*/
+
+}
+
+h3:hover {
+  transform: scale(1.00);
+  /*transition: transform 0.5s ease-in-out;
+  font-weight: normal;*/
+}
+p 
+
+{
+  font-size: clamp(2rem, 3vw, 4rem); /* Min 1rem, responsive 2vw, max 3rem */
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+
+/* Styling for the left header section (logo) */
+.left-header {
+  flex: 1;
+  /* Grow to fill available space */
+  height: 100%;
+  /* Match the height of the header */
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Horizontally centers the content */
+}
+
+.left-header img {
+  max-height: 100%;
+  /* Ensure the logo fits within the height of the left header */
+  border-radius: 0%;
+  /* Add rounded corners to the logo */
+  transition: transform 2s ease-in-out;
+  /* Add a smooth scale effect on hover */
+
+}
+
+.left-header img:hover {
+  transform: scale(1.05);
+  /* Scale up the logo on hover */
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Horizontally centers the content */
+
+}
+
+.left-header .logo img {
+  position: relative;
+  justify-content: center;
+  vertical-align: center;
+  top: 20px;
+  bottom: 4px;
+  float: left;
+}
+
+/* Hide the video-react control bar */
+.video-react .video-react-controls {
+  display: none !important;
+}
+/*
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensures particles stay behind content */
+/* } */
+
+

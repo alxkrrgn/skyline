@@ -1,0 +1,135 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--main-background-color);
+    font-family: 'Arial', sans-serif;
+}
+/* Styling for the header */
+header {
+    background-color: var(--header-background-color);
+    color: var(--header-text-color);
+    display: flex;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Distribute content evenly */
+}
+
+/* Styling for the left header section (logo) */
+.left-header {
+    flex: 1; /* Grow to fill available space */
+    height: 100%; /* Match the height of the header */
+}
+
+.left-header img {
+    max-height: 100%; /* Ensure the logo fits within the height of the left header */
+    border-radius: 50%; /* Add rounded corners to the logo */
+    transition: transform 0.3s ease-in-out; /* Add a smooth scale effect on hover */
+    height: 50px;
+    width: 50px;
+}
+
+/* Styling for the right header section */
+.right-header {
+    /* Add any styles you want for the right header content */
+}
+
+/* Styling for the toolbar (right content) */
+.toolbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: right;
+}
+
+.toolbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.toolbar li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.toolbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: normal;
+}
+
+/* Add hover effect for the bold option */
+.toolbar a:hover {
+    font-weight: bold;
+}
+
+/* Styling for the main content section */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 80px; /* Add margin-top to create space for the fixed header */
+}
+
+/* Styling for the content section */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling for the left content section */
+.left-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.left-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.left-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the right content section */
+.right-content {
+    flex: 1;
+}
+
+.right-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.right-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styling for the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+img {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}

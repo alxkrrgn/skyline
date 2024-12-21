@@ -1,0 +1,256 @@
+
+/* Ensure the body and html use correct dimensions */
+
+html, body {
+    margin: 0;
+    padding-bottom: 0vh;
+    width: 100vw;
+    margin: 0 auto 0; 
+    height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    /*overflow-y: auto;  /* Allow vertical scrolling */
+    background: transparent; /* Visible background */
+    margin-bottom: 0vh;
+    /*border: 5px solid orange; */
+  }
+  
+  /* Header with fixed positioning */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Example height */
+    background-color: transparent; /* Visible background */
+    z-index: 1000; /* Ensure it's above content */
+    /*border: 2px solid red; */
+  }
+  
+  /* Ensure content starts below the header */
+  body {
+    padding-top: 60px; /* Adjust to match header height */
+  }
+  
+  /* Section layout fixes */
+  section {
+    display: block;
+    width: 100%;
+    height: 100% cover;
+    /*margin: 20vh auto 20vh; */
+    margin: 0vh auto 0vh auto; /* Adjust the value to set desired spacing */
+    padding: 0; /* Optional: Inner spacing */
+    box-sizing: border-box;
+   /* border: 3px dashed lightslategrey; */
+  }
+
+  section:first-of-type {
+    margin-top: 20px; /* Adjust to match the header height */
+  }
+  
+  section.cards {
+    display: block;
+    width: 100%;
+    min-height: 100vh; /* Ensure enough height for the content */
+    margin-top: 100px; /* Match the header height */
+    overflow: visible; /* Prevent clipping */
+  }
+
+  h1 {
+    /* font-size: 4rem; */  
+     font-size: clamp(1.3rem, 12vw, 3.0rem);
+     /* no text shadows */
+     /*text-shadow: 2px 2px 5px darkblue;*/
+     color: black;
+   
+   }
+   
+   .left-content h1 {
+     font-size: 3.0rem;
+   }
+   
+   h4 {
+    /* font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;*/
+     font-family: inherit;
+     font-size: 4rem;
+     /* no text shadows */
+     /*text-shadow: 2px 2px 5px lightslategray;*/
+     color:black;
+     /*color: darkslategrey;*/
+     font-weight: 700;
+   }
+   
+   h4:hover {
+     transform: scale(1.05);
+     transition: transform 0.5s ease-in-out;
+     opacity: 1.0;
+      /* no text shadows */
+     /*text-shadow: 2px 2px 5px lightslategray;*/
+     color: darkblue;
+     font-weight: 700;
+   }
+   
+   h1:hover {
+   /*transform: scale(1.05);*/
+   transform-origin: center; /* Scale from the center */
+   /*transition: transform 0.5s ease-in-out;*/
+   opacity: 1.0;
+     /* no text shadows */
+   
+   /*text-shadow: 2px 2px 5px darkblue;*/
+   color: navy;
+   /*font-weight: bold;*/
+   will-change: transform; /* Optimize for the hover effect */
+   }
+   
+   h2:hover {
+     /*transform: scale(1.05);*/
+     transition: transform 0.5s ease-in-out;
+     opacity: 1.0;
+       /* no text shadows */
+     /*text-shadow: 2px 2px 5px lightslategray;*/
+     /*font-weight: bold;*/
+     color: blue;
+   
+   }
+   
+   h2 {
+     font-size: clamp(1.0rem, 10vw, 2.5rem);
+     /*font-size: 50px;*/
+       /* no text shadows */
+     /*text-shadow: 2px 2px 5px lightslategray;*/
+   
+   }
+   
+   .second h2 {
+     font-size: 50px;
+       /* no text shadows */
+     /*text-shadow: 2px 2px 5px lightslategray;*/
+   
+     color: blue;
+   }
+   
+   .second h3 {
+     font-size: 30px;
+       /* no text shadows */
+     /*text-shadow: 2px 2px 5px lightslategray;*/
+     color: black;
+     text-align: center;
+   
+   }
+   
+   h3 {
+     font-size: clamp(0.65rem, 8vw, 1.5rem);
+     font-weight: 300;
+     /*font-size: 20px;*/
+     /*-webkit-filter: invert(100%);
+     filter: invert(100%);*/
+   
+   }
+   
+   h3:hover {
+     transform: scale(1.00);
+     /*transition: transform 0.5s ease-in-out;
+     font-weight: normal;*/
+   }
+   p 
+   
+   {
+     font-size: clamp(2rem, 3vw, 4rem); /* Min 1rem, responsive 2vw, max 3rem */
+     -webkit-filter: invert(100%);
+     filter: invert(100%);
+   }
+   
+   
+   /* Styling for the left header section (logo) */
+   .left-header {
+     flex: 1;
+     /* Grow to fill available space */
+     height: 100%;
+     /* Match the height of the header */
+     align-items: center; /* Vertically centers the content */
+     justify-content: center; /* Horizontally centers the content */
+   }
+   
+   .left-header img {
+     max-height: 100%;
+     /* Ensure the logo fits within the height of the left header */
+     border-radius: 0%;
+     /* Add rounded corners to the logo */
+     transition: transform 2s ease-in-out;
+     /* Add a smooth scale effect on hover */
+   
+   }
+   
+   .left-header img:hover {
+     transform: scale(1.00);
+     /* Scale up the logo on hover */
+     align-items: center; /* Vertically centers the content */
+     justify-content: center; /* Horizontally centers the content */
+   
+   }
+   
+   .left-header .logo img {
+     position: relative;
+     justify-content: center;
+     vertical-align: center;
+     top: 15px; 
+     left: 5px;
+     bottom: 5px;
+     float: left;
+   }
+
+   .cards {
+/*  border: 2px solid red; /* Debug visibility */
+/*  background-color: #f0f0f0; /* Optional, for contrast */
+    border: 1px solid red transparent; /* Debug visibility */
+    background-color: #f0f0f0 transparent; /* Optional, for contrast */
+
+  }
+  .card {
+/*  border: 1px solid blue; /* Debug individual cards */
+/*  background-color: white; /* Ensure content is visible */
+    border: 1px solid blue transparent; /* Debug individual cards */
+    background-color: white transparent; /* Ensure content is visible */
+  }
+
+  footer {
+   /* position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0; */
+    width: 100%; /* Make footer span the entire width */
+    background-color: darkblue; /* Optional: match your header or other design elements */
+    color: white; /* Optional: text color */
+    text-align: center; /* Optional: center the text */
+    padding: 1rem; /* Optional: adjust padding */
+    margin: 0;
+    /*z-index: 1000; /* Ensure it's above other elements if needed */
+    /*border: 5px solid blue; */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  }
+
+  .App {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  min-height: 100vh; /* Make the App span the full viewport height */
+  margin: 0; /* Ensure no default margins are added */
+  padding: 0; /* Optional: Remove padding if unnecessary */
+  box-sizing: border-box; /* Ensure padding does not affect layout */
+
+}
+  
+.footerAlert {
+
+  width: 20vw;
+  margin: 2vh 40vw;
+
+  @media (max-width: 768px) {
+    width: 80vw; /* Adjust width for mobile */
+    margin: 2vh 10vw; /* Adjust margin for mobile */
+
+    h3{
+    font-size: clamp(0.50rem, 6vw, 1.25rem);
+    }
+  }
+
+}

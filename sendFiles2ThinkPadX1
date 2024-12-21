@@ -1,0 +1,8 @@
+
+
+rsync -av ~/Downloads/ alex@10.0.0.225:/home/alex/Downloads/
+
+ssh-keygen -t ed25519 -C "alxkrgn@hotmail.com"
+
+ssh-copy-id alex@10.0.0.225
+

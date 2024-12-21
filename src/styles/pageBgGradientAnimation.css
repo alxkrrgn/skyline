@@ -1,0 +1,76 @@
+/* Basic page layout with gradient */
+html, body {
+    background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 50%, #e0e0e0 100%);
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Shining animation keyframes */
+@keyframes shine {
+    0% {
+        background-position: -200%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+/* Mirror effect: reflection */
+body::before {
+    content: '';
+    position: fixed;  /* Fixes it to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Mirrors the background */
+    transform: scaleY(-1); /* Flips the background vertically */
+    opacity: 0.2; /* Low opacity for a subtle reflection */
+    pointer-events: none; /* Allows content to be interacted with */
+    z-index: -2; /* Behind content */
+}
+
+/* Shining light effect on top of the content */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 100%);
+    background-size: 200% 200%;
+    animation: shine 5s infinite linear;
+    pointer-events: none; /* Prevents interaction block */
+    z-index: -1; /* Behind content but above mirror effect */
+}
+
+/* Ensure content sits above the effects */
+* {
+    position: relative;
+    z-index: 0;
+}
+
+/* Example button styling (to ensure hover works) */
+button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005f73; /* Darker on hover */
+}
