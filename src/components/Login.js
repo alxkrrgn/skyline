@@ -54,7 +54,7 @@ const Login = () => {
         
             console.log('Post data:', Object.fromEntries(postData.entries()));
         
-            const response = await fetch('https://backend.skyline-wealth.com/login.php', {
+            const response = await fetch('http://localhost/login.php', {
                 method: 'POST',
                 body: postData, // Let the browser handle Content-Type
             });
