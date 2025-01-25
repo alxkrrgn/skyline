@@ -5,6 +5,7 @@ import CardContainerDashboard from './CardContainerDashboard';
 import FinancialDashboard from './FinancialDashboard';
 import { useNavigate } from 'react-router-dom'; // Ensure React Router is set up
 import NavigationMenu from './NavigationMenu';
+import FlexBoxImg4 from './FlexBoxImg4';
 
 const Dashboard = () => {
     const [userData, setUserData] = useState(null);
@@ -52,7 +53,7 @@ const Dashboard = () => {
 </section>
 
     <CardContainerDashboard />
-    <NavigationMenu />
+    <FlexBoxImg4 />
 
     </section>
 
