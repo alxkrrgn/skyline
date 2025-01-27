@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.dce21fa3.css",
-    "main.js": "/static/js/main.7c105909.js",
+    "main.css": "/static/css/main.6e76a4a7.css",
+    "main.js": "/static/js/main.32ebb207.js",
     "reactPlayerYouTube.js": "/static/js/reactPlayerYouTube.1eb6a257.chunk.js",
     "reactPlayerSoundCloud.js": "/static/js/reactPlayerSoundCloud.4cb671e3.chunk.js",
     "reactPlayerVimeo.js": "/static/js/reactPlayerVimeo.b3d103f6.chunk.js",
@@ -22,8 +22,8 @@
     "static/media/AAPL_options_table.png": "/static/media/AAPL_options_table.5c695cbadb4c120ef461.png",
     "static/media/AAPL_call_risk_chart.png": "/static/media/AAPL_call_risk_chart.44d14642ddcf56faff7f.png",
     "index.html": "/index.html",
-    "main.dce21fa3.css.map": "/static/css/main.dce21fa3.css.map",
-    "main.7c105909.js.map": "/static/js/main.7c105909.js.map",
+    "main.6e76a4a7.css.map": "/static/css/main.6e76a4a7.css.map",
+    "main.32ebb207.js.map": "/static/js/main.32ebb207.js.map",
     "reactPlayerYouTube.1eb6a257.chunk.js.map": "/static/js/reactPlayerYouTube.1eb6a257.chunk.js.map",
     "reactPlayerSoundCloud.4cb671e3.chunk.js.map": "/static/js/reactPlayerSoundCloud.4cb671e3.chunk.js.map",
     "reactPlayerVimeo.b3d103f6.chunk.js.map": "/static/js/reactPlayerVimeo.b3d103f6.chunk.js.map",
@@ -40,7 +40,7 @@
     "reactPlayerPreview.82ac0e27.chunk.js.map": "/static/js/reactPlayerPreview.82ac0e27.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dce21fa3.css",
-    "static/js/main.7c105909.js"
+    "static/css/main.6e76a4a7.css",
+    "static/js/main.32ebb207.js"
   ]
 }
